@@ -1,5 +1,8 @@
 p {
-	margin-bottom: 1.5em;
+	margin: 0.75rem 0 1.5rem 0;
+	&:last-child {
+		margin-bottom: 0;
+	}
 }
 
 dfn,
@@ -48,4 +51,14 @@ ins {
 
 big {
 	font-size: 125%;
+}
+
+.text-3 {
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 24px;
+}
+.text-colored {
+	color: $color__accent;
 }

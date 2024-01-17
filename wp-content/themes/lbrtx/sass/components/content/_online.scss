@@ -1,0 +1,33 @@
+.online {
+  padding: 115px 0 80px 1px;
+  &__title {
+    margin-bottom: 80px;
+  }
+  &__row {
+    display: flex;
+  }
+  &__col {
+    width: 50%;
+    display: flex;
+    img {
+      max-width: 460px;
+      object-fit: contain;
+      width: 100%;
+      min-height: 100%; 
+    }
+    &:has(img) {
+      justify-content: flex-end;
+    }
+  }
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+  &__item {
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 36px;
+  }
+}

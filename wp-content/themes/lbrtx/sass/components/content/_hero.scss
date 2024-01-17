@@ -1,0 +1,17 @@
+.hero {
+  padding: 165px 0 188px 0;
+  background-image: url('/wp-content/themes/lbrtx/assets/img/hero_bg.jpeg');
+  background-size: cover;
+  background-repeat: repeat-x;
+  background-position: 40%;
+
+  &__title {
+    width: calc(100% / 12 * 7);
+    color: $color__white; 
+  }
+  &__buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 52px;
+  }
+}

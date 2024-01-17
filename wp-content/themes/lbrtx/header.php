@@ -81,7 +81,7 @@
 					</ul>
 					<div class="header__buttons">
 						<a href="#"><?php _e('Войти', 'lbrtx'); ?></a>
-						<a href="#" class="button">
+						<a href="#" class="button small">
 							<?php _e('Регистрация', 'lbrtx'); ?>
 						</a>
 					</div>

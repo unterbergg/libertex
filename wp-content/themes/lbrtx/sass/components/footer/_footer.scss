@@ -4,4 +4,41 @@
   font-style: normal;
   font-weight: 400;
   line-height: 20px; 
+  color: $color__content-tertiary;
+
+  padding: 25px 0 48px;
+
+  &__row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  &__col {
+    &:last-child {
+      padding-left: 165px;
+    }
+  }
+  p {
+    a {
+      text-decoration-line: underline;
+      color: $color__primary-dark;
+    }
+    .text-3 {
+      color: $color__primary-dark;
+    }
+  }
+  &__services {
+    display: flex;
+    gap: 18px;
+    margin-top: 50px;
+    img {
+      width: auto;
+      max-height: 22px;
+    }
+  }
+  &__menu {
+    li {
+      padding: 26px 0 0 0;
+      display: block;
+    }
+  }
 }

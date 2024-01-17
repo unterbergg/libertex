@@ -1,0 +1,35 @@
+.tools {
+  padding: 80px 0;
+  &__title {
+    text-align: center;
+    margin: 0 0 80px 0;
+  }
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 28px 12px;
+    border-radius: 0px 0px 4px 4px;
+  }
+   &__item {
+    position: relative;
+    padding: 20px 1rem 50px 1rem;
+    border-radius: 0px 0px 4px 4px;
+    background: #FFF;
+    box-shadow: 2px 7px 34px 0px rgba(197, 196, 196, 0.25);
+    border-top: 4px solid $color__accent;
+
+    &> *:not(.tools__item-bg) {
+      z-index: 2;
+      position: relative;
+    }
+
+    &-bg {
+      z-index: 1;
+      position: absolute;
+      width: 144px;
+      height: 114px;
+      bottom: 15px;
+      right: 15px;
+    }
+   }
+}
