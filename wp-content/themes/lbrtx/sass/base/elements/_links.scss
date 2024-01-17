@@ -1,0 +1,35 @@
+a {
+	text-decoration: none;
+	color: $color__primary-dark;
+
+	&:visited {
+		color: $color__primary-dark;
+	}
+
+	&:hover,
+	&:focus,
+	&:active {
+		color: $color__primary-dark;
+	}
+
+	&:focus {
+		outline: thin dotted;
+	}
+
+	&:hover,
+	&:active {
+		outline: 0;
+	}
+
+	&.button {
+		padding: 0.5rem 1rem;
+		border-radius: 4px;
+		color: $color__primary-dark;
+		background-color: $color__accent;
+
+		font-size: 14px;
+		font-style: normal;
+		font-weight: 600;
+		line-height: 20px;
+	}
+}

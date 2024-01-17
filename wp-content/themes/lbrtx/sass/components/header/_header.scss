@@ -1,0 +1,63 @@
+.header {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  &__notice {
+    background-color: $color__primary-dark;
+    color: $color__white;
+    text-align: center;
+    padding: 0.5rem 0;
+  }
+  &__top {
+    background-color: $color__primary-light;
+    padding: 0.375rem 0;
+    &> .wrapper, ul {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    ul {
+      margin: 0;
+      padding: 0;
+      gap: 26px;
+      li {
+        display: inline-block;
+      }
+    }
+  }
+  &__phone {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+  }
+  &__logo {
+    display: flex;
+  }
+  &__navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+  }
+  &__menu {
+    display: flex;
+    gap: 0.5rem;
+    li {
+      display: inline-block;
+      padding: 0 0.5rem;
+    }
+  }
+  &__buttons {
+    a {
+      margin-left: 12px;
+      &:not(.button) {
+        text-decoration: underline;
+        color: $color__accent;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
