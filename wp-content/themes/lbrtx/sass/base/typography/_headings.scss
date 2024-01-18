@@ -9,29 +9,25 @@ h6 {
 }
 
 h1 {
+	font-family: $font__mont-bold;
 	font-size: 66px;
-	font-style: normal;
-	font-weight: 800;
 	line-height: 72px;
 	letter-spacing: -0.66px;
 }
 h2 {
+	font-family: $font__mont-bold;
 	font-size: 48px;
-	font-style: normal;
-	font-weight: 800;
 	line-height: 56px; /* 116.667% */
 	letter-spacing: -0.24px;
 }
 h3 {
+	font-family: $font__mont-bold;
 	font-size: 26px;
-	font-style: normal;
-	font-weight: 800;
 	line-height: 36px;
 }
 
 h5 {
+	font-family: $font__montblanc-bold;
 	font-size: 18px;
-	font-style: normal;
-	font-weight: 700;
 	line-height: 24px;
 }

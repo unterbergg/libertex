@@ -144,27 +144,33 @@ get_header();
 					<div class="onliner__col">
 						<div class="online__items">
 							<div class="online__item">
-								<?php echo file_get_contents(get_stylesheet_directory() . '/assets/icons/check.svg');?>	
+								<?php echo file_get_contents(get_stylesheet_directory() . '/assets/icons/bitcoin_shadow.svg');?>	
 								<span>
 									<?php _e('Все популярные финансовые инструменты в одной платформе.', 'lbrtx'); ?>		
 								</span>
 							</div>
 							<div class="online__item">
-								<?php echo file_get_contents(get_stylesheet_directory() . '/assets/icons/check.svg');?>	
+								<?php echo file_get_contents(get_stylesheet_directory() . '/assets/icons/download_shadow.svg');?>	
 								<span>
-									<?php _e('Все популярные финансовые инструменты в одной платформе.', 'lbrtx'); ?>		
+									<?php _e('Не требует скачивания и установки.', 'lbrtx'); ?>		
 								</span>
 							</div>
 							<div class="online__item">
-								<?php echo file_get_contents(get_stylesheet_directory() . '/assets/icons/check.svg');?>	
+								<?php echo file_get_contents(get_stylesheet_directory() . '/assets/icons/earth_shadow.svg');?>	
 								<span>
-									<?php _e('Все популярные финансовые инструменты в одной платформе.', 'lbrtx'); ?>		
+									<?php _e('Встроенные инструменты для анализа рынка.', 'lbrtx'); ?>		
 								</span>
 							</div>
 							<div class="online__item">
-								<?php echo file_get_contents(get_stylesheet_directory() . '/assets/icons/check.svg');?>	
+								<?php echo file_get_contents(get_stylesheet_directory() . '/assets/icons/money_shadow.svg');?>	
 								<span>
-									<?php _e('Все популярные финансовые инструменты в одной платформе.', 'lbrtx'); ?>		
+									<?php _e('Быстрый доступ к финансовым рынкам и отсутствие скрытых комиссий.', 'lbrtx'); ?>		
+								</span>
+							</div>
+							<div class="online__item">
+								<?php echo file_get_contents(get_stylesheet_directory() . '/assets/icons/shield_shadow.svg');?>	
+								<span>
+									<?php _e('Трехступенчатая система защиты ваших данных.', 'lbrtx'); ?>		
 								</span>
 							</div>
 						</div>
@@ -179,7 +185,16 @@ get_header();
 					</a>
 				</div>
 			</div>
-		</section>		
+		</section>
+
+		<section class="partners">
+			<div class="wrapper">
+				<div class="partners__wrapper">
+					<img src="<?php echo get_template_directory_uri(); ?>/assets/img/belcart.png" alt="Belcart">
+					<img src="<?php echo get_template_directory_uri(); ?>/assets/img/belcart2.png" alt="Belcart2">
+				</div>
+			</div>
+		</section>
 
 	</main><!-- #main -->
 

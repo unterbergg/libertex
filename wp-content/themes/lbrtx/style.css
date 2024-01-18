@@ -40,6 +40,27 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	- Alignments
 
 --------------------------------------------------------------*/
+@font-face {
+	font-family: 'MontBold';
+	src: url("/wp-content/themes/lbrtx/assets/fonts/mont/Mont-Bold.eot");
+	src: url("/wp-content/themes/lbrtx/assets/fonts/mont/Mont-Bold.woff2") format("woff2"), url("/wp-content/themes/lbrtx/assets/fonts/mont/Mont-Bold.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: 'MontBlanc';
+	src: url("/wp-content/themes/lbrtx/assets/fonts/montblank/MontBlanc-Trial-Regular.woff2");
+}
+
+@font-face {
+	font-family: 'MontBlancSemiBold';
+	src: url("/wp-content/themes/lbrtx/assets/fonts/montblank/MontBlanc-Trial-SemiBold.woff2");
+}
+
+@font-face {
+	font-family: 'MontBlancBold';
+	src: url("/wp-content/themes/lbrtx/assets/fonts/montblank/MontBlanc-Trial-Bold.woff2");
+}
+
 /*--------------------------------------------------------------
 # Generic
 --------------------------------------------------------------*/
@@ -380,7 +401,6 @@ select,
 optgroup,
 textarea {
 	color: #404040;
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-size: 1rem;
 	line-height: 1.5;
 }
@@ -396,33 +416,29 @@ h6 {
 }
 
 h1 {
+	font-family: "MontBold";
 	font-size: 66px;
-	font-style: normal;
-	font-weight: 800;
 	line-height: 72px;
 	letter-spacing: -0.66px;
 }
 
 h2 {
+	font-family: "MontBold";
 	font-size: 48px;
-	font-style: normal;
-	font-weight: 800;
 	line-height: 56px;
 	/* 116.667% */
 	letter-spacing: -0.24px;
 }
 
 h3 {
+	font-family: "MontBold";
 	font-size: 26px;
-	font-style: normal;
-	font-weight: 800;
 	line-height: 36px;
 }
 
 h5 {
+	font-family: "MontBlancBold";
 	font-size: 18px;
-	font-style: normal;
-	font-weight: 700;
 	line-height: 24px;
 }
 
@@ -484,8 +500,7 @@ big {
 
 .text-3 {
 	font-size: 16px;
-	font-style: normal;
-	font-weight: 600;
+	font-family: "MontBlancSemiBold";
 	line-height: 24px;
 }
 
@@ -497,6 +512,7 @@ big {
 --------------------------------------------- */
 body {
 	background: #fff;
+	font-family: "MontBlanc";
 }
 
 hr {
@@ -586,8 +602,7 @@ a.button {
 	padding: 12px 20px;
 	border-radius: 80px;
 	font-size: 18px;
-	font-style: normal;
-	font-weight: 600;
+	font-family: "MontBlancSemiBold";
 	line-height: 28px;
 }
 
@@ -601,8 +616,7 @@ a.button.small {
 	padding: 0.5rem 1rem;
 	border-radius: 4px;
 	font-size: 14px;
-	font-style: normal;
-	font-weight: 600;
+	font-family: "MontBlancSemiBold";
 	line-height: 20px;
 }
 
@@ -793,8 +807,7 @@ textarea {
 
 .header {
 	font-size: 14px;
-	font-style: normal;
-	font-weight: 400;
+	font-family: "MontBlanc";
 	line-height: 20px;
 }
 
@@ -869,8 +882,7 @@ textarea {
 .footer {
 	background-color: #F4F4F4;
 	font-size: 14px;
-	font-style: normal;
-	font-weight: 400;
+	font-family: "MontBlanc";
 	line-height: 20px;
 	color: #8D8D8D;
 	padding: 25px 0 48px;
@@ -1034,6 +1046,7 @@ textarea {
 
 .online__col:has(img) {
 	justify-content: flex-end;
+	padding-left: 100px;
 }
 
 .online__items {
@@ -1044,9 +1057,35 @@ textarea {
 
 .online__item {
 	font-size: 22px;
-	font-style: normal;
-	font-weight: 600;
+	font-family: "MontBlancSemiBold";
 	line-height: 36px;
+	display: flex;
+	gap: 26px;
+}
+
+.online__item svg {
+	min-width: 64px;
+}
+
+.online__cta {
+	margin-top: 50px;
+	text-align: center;
+}
+
+.partners {
+	padding: 32px 0;
+	background-color: #F8F9FA;
+}
+
+.partners__wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 35px;
+}
+
+.partners__wrapper img {
+	max-height: 64px;
 }
 
 /*--------------------------------------------------------------

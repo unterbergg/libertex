@@ -17,6 +17,7 @@
     }
     &:has(img) {
       justify-content: flex-end;
+      padding-left: 100px;
     }
   }
   &__items {
@@ -26,8 +27,16 @@
   }
   &__item {
     font-size: 22px;
-    font-style: normal;
-    font-weight: 600;
+    font-family: $font__montblanc-semibold;
     line-height: 36px;
+    display: flex;
+    gap: 26px;
+    svg {
+      min-width: 64px;
+    }
+  }
+  &__cta {
+    margin-top: 50px;
+    text-align: center;
   }
 }

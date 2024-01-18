@@ -1,7 +1,6 @@
 .header {
   font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
+  font-family: $font__montblanc-regular;
   line-height: 20px;
   &__notice {
     background-color: $color__primary-dark;
