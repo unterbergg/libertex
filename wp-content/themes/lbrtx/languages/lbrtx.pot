@@ -198,5 +198,5 @@ msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr ""
 
 
-msgid "Инвестируй на финансовых рынках c"
+msgid "Инвестиционные инструменты"
 msgstr ""

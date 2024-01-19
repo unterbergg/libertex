@@ -40,21 +40,115 @@
     padding: 1rem 0;
   }
   &__menu {
-    display: flex;
     gap: 0.5rem;
+
+    display: none;
+    @include respond-to('desktop') {
+      display: flex;
+    }
     li {
       display: inline-block;
       padding: 0 0.5rem;
     }
+
+    &-mobile {
+      display: none;
+      position: fixed;
+      height: 100vh;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      background-color: $color__white;
+      z-index: 99999999;
+      header {
+        padding: 14px 24px 18px 24px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        fill: #FFF;
+        box-shadow:1px 7px 21px rgba(177, 177, 177, 0.25);
+      }
+      &__wrapper {
+        display: flex;
+        flex-direction: column;
+        padding: 20px 40px;
+      }
+
+      ul {
+        li {
+          display: block;
+          padding: 12px 0 8px 0;
+          border-bottom: 0.5px solid #E0E0E0;
+          a:not(.button) {
+            color: $color__primary-dark;
+            text-decoration: none;
+            
+            font-size: 16px;
+            line-height: 24px;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
   }
+  
   &__buttons {
+    display: flex;
+    align-items: center;
+    gap: 12px;
     a {
-      margin-left: 12px;
       &:not(.button) {
         text-decoration: underline;
         color: $color__accent;
         &:hover {
           text-decoration: none;
+        }
+      }
+    }
+
+    &-mob {
+      display: flex;
+      justify-content: stretch;
+      flex-direction: column;
+      text-align: center;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+  }
+  &__close {
+    cursor: pointer;
+  }
+  &__hamburger {
+    display: inline-block;
+    position: relative;
+    margin-left: 12px;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    @include respond-to('desktop') {
+      display: none;
+    }
+
+    svg {
+      width: 24px;
+      height: 24px;
+      &:first-child {
+        display: block;
+      }
+      &:last-child {
+        display: none;
+      }
+    }
+    &.open {
+      svg {
+        &:first-child {
+          display: none;
+        }
+        &:last-child {
+          display: block;
         }
       }
     }

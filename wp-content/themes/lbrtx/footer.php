@@ -88,7 +88,11 @@
 			</div>
 		</div>
 	</footer><!-- #colophon -->
-
+	<button id="scrollToTop" class="button">
+	<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+		<path d="M17 14L12 9L7 14" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+	</svg>
+	</button>
 <?php wp_footer(); ?>
 
 </body>

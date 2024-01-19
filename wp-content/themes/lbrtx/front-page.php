@@ -196,6 +196,197 @@ get_header();
 			</div>
 		</section>
 
+		<section class="news">
+			<div class="wrapper">
+				<div class="news__header">
+					<h2 class="news__title">
+						Новости
+					</h2>
+					<a href="#" class="button ghost accent">
+						Читать все
+					</a>
+				</div>
+				<div class="news__items-large">
+					<a href="#" class="news__item">
+						<img src="" alt="">
+						<h6 class="news__title">
+							Изменения в расписании совершения операций по ряду инструментов
+						</h6>
+						<p class="news__decsription">
+							Уважаемые Клиенты!Просим вас обратить внимание на изменения в расписании совершения операций по ряду инструментов, 
+							которое произойдет в связи с грядущими в июле праздниками в США
+						</p>
+						<span class="news__meta">Пн, 08/26/2022 - 19:54</span>
+					</a>
+					<a href="#" class="news__item">
+						<img src="" alt="">
+						<h6 class="news__title">
+							Изменения в расписании совершения операций по ряду инструментов
+						</h6>
+						<p class="news__decsription">
+							Уважаемые Клиенты!Просим вас обратить внимание на изменения в расписании совершения операций по ряду инструментов, 
+							которое произойдет в связи с грядущими в июле праздниками в США
+						</p>
+						<span class="news__meta">Пн, 08/26/2022 - 19:54</span>
+					</a>
+					<a href="#" class="news__item">
+						<img src="" alt="">
+						<h6 class="news__title">
+							Изменения в расписании совершения операций по ряду инструментов
+						</h6>
+						<p class="news__decsription">
+							Уважаемые Клиенты!Просим вас обратить внимание на изменения в расписании совершения операций по ряду инструментов, 
+							которое произойдет в связи с грядущими в июле праздниками в США
+						</p>
+						<span class="news__meta">Пн, 08/26/2022 - 19:54</span>
+					</a>
+				</div>
+				<hr>
+				<div class="news__items">
+					<a href="#" class="news__item">
+						<h6 class="news__title">
+							Изменения в расписании совершения операций по ряду инструментов
+						</h6>
+						<span class="news__meta">Пн, 08/26/2022 - 19:54</span>
+					</a>
+					<a href="#" class="news__item">
+						<img src="" alt="">
+						<h6 class="news__title">
+							Изменения в расписании совершения операций по ряду инструментов
+						</h6>
+						<p class="news__decsription">
+							Уважаемые Клиенты!Просим вас обратить внимание на изменения в расписании совершения операций по ряду инструментов, 
+							которое произойдет в связи с грядущими в июле праздниками в США
+						</p>
+						<span class="news__meta">Пн, 08/26/2022 - 19:54</span>
+					</a>
+					<a href="#" class="news__item">
+						<img src="" alt="">
+						<h6 class="news__title">
+							Изменения в расписании совершения операций по ряду инструментов
+						</h6>
+						<p class="news__decsription">
+							Уважаемые Клиенты!Просим вас обратить внимание на изменения в расписании совершения операций по ряду инструментов, 
+							которое произойдет в связи с грядущими в июле праздниками в США
+						</p>
+						<span class="news__meta">Пн, 08/26/2022 - 19:54</span>
+					</a>
+					<a href="#" class="news__item">
+						<img src="" alt="">
+						<h6 class="news__title">
+							Изменения в расписании совершения операций по ряду инструментов
+						</h6>
+						<p class="news__decsription">
+							Уважаемые Клиенты!Просим вас обратить внимание на изменения в расписании совершения операций по ряду инструментов, 
+							которое произойдет в связи с грядущими в июле праздниками в США
+						</p>
+						<span class="news__meta">Пн, 08/26/2022 - 19:54</span>
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<section class="apps">
+			<div class="wrapper">
+				<div class="apps__items">
+					<div class="apps__item">
+						<div>
+							<h5 class="apps__title">
+								<span class="text-colored">
+									Мобильный Libertex для iOS и Android
+								</span>
+							</h5>
+							<p>
+								Инвестируйте на финансовых рынках в любое время в любом месте. 
+								Мгновенный доступ к лучшим бес-посставочным внебиржевым финансовым инструментам прямо с вашего смартфона.
+							</p>
+						</div>
+						<div class="apps__links">
+							<a href="#">
+								<?php echo file_get_contents(get_stylesheet_directory() . '/assets/img/app_store.svg');?>
+							</a>
+							<a href="#">
+								<?php echo file_get_contents(get_stylesheet_directory() . '/assets/img/google_play.svg');?>
+							</a>
+						</div>
+					</div>
+					<div class="apps__item">
+						<div>
+							<h5 class="apps__title">
+								<span class="text-colored">
+									Онлайн-платформа для инвестиций
+								</span>
+							</h5>
+							<p>
+							Инвестируйте в CFD на акции, фондовые индексы и валюты без скачивания и установки терминала. 
+							Все в одной платформе.
+							</p>
+						</div>
+						<a href="#" class="button">
+							Инвестировать сейчас
+						</a>
+					</div>
+					<div class="apps__item">
+						<div>
+							<h5 class="apps__title">
+								<span class="text-colored">
+									MetaTrader 5
+								</span>
+							</h5>
+							<p>
+								Выходите на профессиональный уровень инвестиций с популярной платформой для опытных клиентов.
+							</p>
+						</div>
+						<div>
+							<a href="#" class="apps__link">
+								Скачать MetaTrader 5 для ПК
+							</a>
+							<div class="apps__links">
+								<a href="#">
+									<?php echo file_get_contents(get_stylesheet_directory() . '/assets/img/app_store.svg');?>
+								</a>
+								<a href="#">
+									<?php echo file_get_contents(get_stylesheet_directory() . '/assets/img/google_play.svg');?>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="apps__item">
+						<div>
+							<h5 class="apps__title">
+								<span class="text-colored">
+									MetaTrader 4 
+								</span>
+							</h5>
+							<p>
+								Популярный скачиваемый терминал для опытных клиентов. 
+								Предоставляет широкие возможности для инвестиций на финансовых рынках.
+							</p>
+						</div>
+						<div>
+							<a href="#" class="apps__link">
+								Скачать MetaTrader 4 для ПК
+							</a>
+							<div class="apps__links">
+								<a href="#" class="apps__link">
+									<?php echo file_get_contents(get_stylesheet_directory() . '/assets/img/app_store.svg');?>
+								</a>
+								<a href="#" class="apps__link">
+									<?php echo file_get_contents(get_stylesheet_directory() . '/assets/img/google_play.svg');?>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="apps__cta">
+					<a href="#" class="button ghost">
+						Подробнее
+					</a>
+				</div>
+			</div>
+		</section>
+
+
 	</main><!-- #main -->
 
 <?php
