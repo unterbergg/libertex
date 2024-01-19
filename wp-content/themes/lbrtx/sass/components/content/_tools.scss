@@ -6,9 +6,18 @@
   }
   &__grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 28px 12px;
     border-radius: 0px 0px 4px 4px;
+
+    grid-template-columns: 1fr;
+    gap: 12px;
+    @include respond-to('mobile') {
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    @include respond-to('desktop') {
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 28px 12px;
+    }
   }
    &__item {
     position: relative;
@@ -26,10 +35,15 @@
     &-bg {
       z-index: 1;
       position: absolute;
-      width: 144px;
-      height: 114px;
+      width: 82px;
+      height: 87px;
       bottom: 15px;
       right: 15px;
+
+      @include respond-to('tablet') {
+        width: 144px;
+        height: 114px;
+      }
     }
    }
 }

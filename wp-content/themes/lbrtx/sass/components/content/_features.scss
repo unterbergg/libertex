@@ -1,7 +1,11 @@
 .features {
-  padding: 37px 0 68px 0;
   background-image: url('/wp-content/themes/lbrtx/assets/img/features_bg.png');
   position: relative;
+
+  padding: 16px 0 22px 0;
+  @include respond-to('tablet') {
+    padding: 37px 0 68px 0;
+  }
 
   .wrapper {
     position: relative;
@@ -9,14 +13,20 @@
 
   &__title {
     color: $color__white;
+    margin-bottom: 26px;
   }
   &__items {
-    position: absolute;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
-    left: 0;
-    right: 0;
+
+    gap: 12px;
+    grid-template-columns: 1fr;
+    @include respond-to('mobile') {
+      margin-bottom: -120px;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    @include respond-to('tablet') {
+      gap: 20px;
+    }
   }
   &__item {
     border-radius: 4px;
@@ -28,9 +38,16 @@
       min-height: 26px;
     }
     
-    padding: 24px 16px;
-    &:nth-child(2) {
-      padding: 24px;
+    padding: 9px 6px;
+    min-height: 88px;
+    @include respond-to('mobile') {
+      min-height: unset;
+    }
+    @include respond-to('tablet') {
+      padding: 24px 16px;
+      &:nth-child(2) {
+        padding: 24px;
+      }
     }
   }
 }

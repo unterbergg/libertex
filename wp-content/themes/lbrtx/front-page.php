@@ -31,6 +31,9 @@ get_header();
 						<?php _e('Демо-аккаунт', 'lbrtx'); ?>
 					</a>
 				</div>
+				<div class="hero__img mobile-only">
+					<img src="<?php echo get_template_directory_uri(); ?>/assets/img/phone.png" alt="IPhone">
+				</div>
 			</div>
 			
 		</section>

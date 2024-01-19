@@ -29,6 +29,7 @@
 					<?php _e('Совершение операций с беспоставочными внебиржевыми финансовыми инструментами имеет рискованный характер.
 					Возможность получения прибыли неразрывно связана с риском получения убытков.
 					При совершении операций к клиентам не переходят право собственности и иные права на базовые активы', 'lbrtx') ;?>
+					<a href="javaScript:void(0);" class="show">V</a>
 			</div>
 		</div>
 		<div class="header__top">
@@ -39,14 +40,21 @@
 				</a>
 				<div>
 					<ul>
+						<li class="mobile-only">
+							<a href="#">
+								<?php echo file_get_contents(get_stylesheet_directory() . '/assets/icons/mail.svg');?>
+							</a>
+						</li>
 						<li>
 							<a href="https://fxclub.by/filials">
-								<?php _e('Наши офисы', 'lbrtx'); ?>
+								<span><?php _e('Наши офисы', 'lbrtx'); ?></span>
+								<?php echo file_get_contents(get_stylesheet_directory() . '/assets/icons/location.svg');?>
 							</a>
 						</li>
 						<li>
 							<a href="https://support.fxclub.by/ru-RU/support/home" target="_blank">
-								<?php _e('Центр Поддержки', 'lbrtx'); ?>
+								<span><?php _e('Центр Поддержки', 'lbrtx'); ?></span>
+								<?php echo file_get_contents(get_stylesheet_directory() . '/assets/icons/support.svg');?>
 							</a>
 						</li>
 					</ul>

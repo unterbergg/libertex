@@ -18,6 +18,11 @@
     &:has(img) {
       justify-content: flex-end;
       padding-left: 100px;
+
+      display: none;
+      @include respond-to('tablet') {
+        display: block;
+      }
     }
   }
   &__items {

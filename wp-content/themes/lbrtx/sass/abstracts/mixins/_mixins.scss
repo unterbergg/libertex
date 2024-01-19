@@ -1,8 +1,7 @@
 $breakpoints: (
 	'mobile': (min-width:  640px),
-	'tablet':  ( min-width:  769px ),
-	'desktop': ( min-width:  1201px ),
-	'largeDesktop':  ( min-width: 1441px )
+	'tablet':  ( min-width:  768px ),
+	'desktop': ( min-width: 1440px )
 ) !default;
 
 @mixin respond-to($breakpoint) {

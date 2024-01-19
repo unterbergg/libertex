@@ -9,11 +9,19 @@
 
   &__row {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    
+    grid-template-columns: 1fr;
+    @include respond-to('desktop') { 
+      grid-template-columns: 1fr 1fr;
+    }
   }
   &__col {
     &:last-child {
       padding-left: 165px;
+      display: none;
+      @include respond-to('desktop') { 
+        display: block;
+      }
     }
   }
   p {
@@ -35,6 +43,10 @@
     }
   }
   &__menu {
+    display: none;
+    @include respond-to('desktop') {
+      display: block;
+    }
     li {
       padding: 26px 0 0 0;
       display: block;

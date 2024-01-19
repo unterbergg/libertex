@@ -9,8 +9,16 @@
   }
   &__items {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+
+    grid-template-columns: 1fr;
     gap: 12px;
+    @include respond-to('tablet') {
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    @include respond-to('desktop') {
+      gap: 12px;
+    }
   }
   &__item {
     padding: 16px 35px;

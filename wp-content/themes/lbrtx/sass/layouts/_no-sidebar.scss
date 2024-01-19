@@ -2,4 +2,19 @@
 	max-width: calc(1124px + 2rem);
 	padding: 0 1rem;
 	margin: 0 auto;
+
+	@include respond-to('tablet'){
+		padding: 0 2.5rem;
+	}
+}
+
+.mobile-only {
+	@include respond-to('tablet') {
+		display: none !important;
+	}
+}
+.tablet-only {
+	@include respond-to('desktop') {
+		display: none !important;
+	}
 }
