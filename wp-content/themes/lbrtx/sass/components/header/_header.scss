@@ -114,15 +114,17 @@
     }
 
     &-mobile {
-      display: none;
       position: fixed;
       height: 100vh;
-      top: 0;
+      top: -100%;
       bottom: 0;
       right: 0;
       left: 0;
       background-color: $color__white;
       z-index: 99999999;
+
+      transition: all 0.5s;
+
       header {
         padding: 14px 24px 18px 24px;
         display: flex;
@@ -235,6 +237,15 @@
           display: block;
         }
       }
+    }
+  }
+}
+
+body{
+  &.open {
+    overflow: hidden;
+    .header__menu-mobile {
+      top: 0;
     }
   }
 }

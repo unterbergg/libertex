@@ -554,14 +554,6 @@ body {
 	font-family: "MontBlanc";
 }
 
-body.open {
-	overflow: hidden;
-}
-
-body.open .header__menu-mobile {
-	display: block;
-}
-
 html {
 	overflow-x: hidden;
 }
@@ -1052,15 +1044,15 @@ textarea {
 }
 
 .header__menu-mobile {
-	display: none;
 	position: fixed;
 	height: 100vh;
-	top: 0;
+	top: -100%;
 	bottom: 0;
 	right: 0;
 	left: 0;
 	background-color: #fff;
 	z-index: 99999999;
+	transition: all 0.5s;
 }
 
 .header__menu-mobile header {
@@ -1186,6 +1178,14 @@ textarea {
 
 .header__hamburger.open svg:last-child {
 	display: block;
+}
+
+body.open {
+	overflow: hidden;
+}
+
+body.open .header__menu-mobile {
+	top: 0;
 }
 
 .footer {
