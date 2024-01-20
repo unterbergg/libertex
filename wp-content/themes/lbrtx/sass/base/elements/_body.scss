@@ -5,5 +5,7 @@ body {
 
 html {
 	overflow-x: hidden;
-
+	&:has(body.open) {
+		overflow: hidden;
+	}
 }

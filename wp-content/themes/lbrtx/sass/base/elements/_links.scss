@@ -3,25 +3,6 @@ a {
 	color: $color__primary-dark;
 	transition: all 0.3s;
 
-	&:visited {
-		color: $color__primary-dark;
-	}
-
-	&:hover,
-	&:focus,
-	&:active {
-		color: $color__primary-dark;
-	}
-
-	&:focus {
-		outline: thin dotted;
-	}
-
-	&:hover,
-	&:active {
-		outline: 0;
-	}
-
 	&.button {
 		position: relative;
 		display: inline-block;

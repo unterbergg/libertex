@@ -558,6 +558,10 @@ html {
 	overflow-x: hidden;
 }
 
+html:has(body.open) {
+	overflow: hidden;
+}
+
 hr {
 	background-color: #E0E0E0;
 	border: 0;
@@ -620,22 +624,6 @@ a {
 	text-decoration: none;
 	color: #161616;
 	transition: all 0.3s;
-}
-
-a:visited {
-	color: #161616;
-}
-
-a:hover, a:focus, a:active {
-	color: #161616;
-}
-
-a:focus {
-	outline: thin dotted;
-}
-
-a:hover, a:active {
-	outline: 0;
 }
 
 a.button {
@@ -1932,7 +1920,8 @@ body.open .header__menu-mobile {
 	padding: 13px 20px;
 	font-size: 18px;
 	line-height: 28px;
-	border: none;
+	border: 1px solid #FF6633;
+	cursor: pointer;
 	width: auto;
 }
 
@@ -1941,6 +1930,10 @@ body.open .header__menu-mobile {
 		width: 448px;
 		margin: 50px auto 0 auto;
 	}
+}
+
+.form input[type='submit']:hover {
+	background-color: transparent;
 }
 
 .form .form-control {

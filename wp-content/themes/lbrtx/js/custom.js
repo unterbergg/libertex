@@ -1,5 +1,4 @@
 document.addEventListener( 'DOMContentLoaded', ( e ) => {
-	console.log( e );
 	
 	document.getElementById('scrollToTop').addEventListener('click', () => {
 		window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -24,7 +23,6 @@ document.addEventListener( 'DOMContentLoaded', ( e ) => {
 	}
 
 	const toggleNotice = () => {
-		console.log(window.innerWidth)
 		if (window.innerWidth < 768) {
 			headerNotice.querySelector('.wrapper').innerHTML = shortNotice;
 			headerNotice.addEventListener('click', showNotice, true);

@@ -17,14 +17,18 @@
 				<div class="footer__col">
 					<p>
 						© 2015–2023, ООО "Финансовая Компания "Форекс Клуб" 
-						<a href="https://download.fxclub.by/Condition/2015-12-16_certificate.pdf" target="_blank">зарегистрировано</a> 
+						<a href="https://download.fxclub.by/Condition/2015-12-16_certificate.pdf" target="_blank">
+							<?php _e('зарегистрировано', 'lbrtx'); ?>
+						</a> 
 						Минским горисполкомом 16.12.2015 г. Регистрационный номер 192580558
 					</p>
 					<p>
 						Республика Беларусь, г. Минск, 220030, ул. Немига, 5, офис 503
 					</p>
 					<p>
-						<a href="https://download.fxclub.by/Condition/2016-04-19_certificate.pdf" target="_blank">Свидетельство</a>
+						<a href="https://download.fxclub.by/Condition/2016-04-19_certificate.pdf" target="_blank">
+							<?php _e('Свидетельство', 'lbrtx'); ?>
+						</a>
 						№2 выдано 19.04.2016 Национальным банком Республики Беларусь.
 					</p>
 					<p>

@@ -122,7 +122,9 @@ get_header();
               <input type="checkbox" name="checkbox-checked" checked required/>
               <span>
                 Даю 
-                <a href="https://www.fxclub.by/sites/fxby/files/images/soglasie_na_obrabotku_personalnyh_dannyh.pdf" target="_blank">согласие</a>
+                <a href="https://www.fxclub.by/sites/fxby/files/images/soglasie_na_obrabotku_personalnyh_dannyh.pdf" target="_blank">
+                  <?php _e('Согласие', 'lbrtx'); ?>
+                </a>
                 на обработку персональных данных.
               </span>
             </label>
