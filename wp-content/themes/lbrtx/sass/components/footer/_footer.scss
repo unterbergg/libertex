@@ -50,6 +50,12 @@
     li {
       padding: 26px 0 0 0;
       display: block;
+      
+      a {
+        &:hover {
+          text-decoration: underline;
+        }
+      }
     }
   }
 }

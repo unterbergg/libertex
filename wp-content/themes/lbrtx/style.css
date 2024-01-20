@@ -1254,6 +1254,10 @@ body.open .header__menu-mobile {
 	display: block;
 }
 
+.footer__menu li a:hover {
+	text-decoration: underline;
+}
+
 .hero {
 	position: relative;
 	padding: 50px 0 48px 0;
@@ -1396,6 +1400,7 @@ body.open .header__menu-mobile {
 
 .features__items {
 	display: grid;
+	color: #000;
 	gap: 12px;
 	grid-template-columns: 1fr;
 }
@@ -1444,6 +1449,7 @@ body.open .header__menu-mobile {
 
 .online {
 	padding: 115px 0 80px 1px;
+	overflow-x: hidden;
 }
 
 .online__title {
@@ -1452,11 +1458,24 @@ body.open .header__menu-mobile {
 
 .online__row {
 	display: flex;
+	position: relative;
 }
 
 .online__col {
-	width: 50%;
 	display: flex;
+	width: 100%;
+}
+
+@media (min-width: 768px) {
+	.online__col {
+		width: 66%;
+	}
+}
+
+@media (min-width: 1440px) {
+	.online__col {
+		width: 50%;
+	}
 }
 
 .online__col img {
@@ -1467,33 +1486,90 @@ body.open .header__menu-mobile {
 }
 
 .online__col:has(img) {
+	position: relative;
 	justify-content: flex-end;
-	padding-left: 100px;
 	display: none;
+	width: 40%;
 }
 
 @media (min-width: 768px) {
 	.online__col:has(img) {
+		position: absolute;
 		display: block;
+		right: 0;
+		top: 50px;
+		z-index: -1;
+	}
+}
+
+@media (min-width: 1440px) {
+	.online__col:has(img) {
+		position: relative;
+		width: 50%;
+		padding-left: 100px;
+	}
+}
+
+.online__col:has(img):after {
+	content: '';
+	display: block;
+	top: -50%;
+	bottom: 0;
+	right: -200%;
+	left: 50%;
+	background-image: url("/wp-content/themes/lbrtx/assets/img/Candles.png");
+	background-size: contain;
+	position: absolute;
+	z-index: -1;
+}
+
+@media (min-width: 1440px) {
+	.online__col:has(img):after {
+		top: 0;
+		transform: translateX(2%);
+		bottom: 30%;
 	}
 }
 
 .online__items {
 	display: flex;
 	flex-direction: column;
-	gap: 50px;
+	gap: 22px;
 }
 
 .online__item {
-	font-size: 22px;
 	font-family: "MontBlancSemiBold";
-	line-height: 36px;
-	display: flex;
-	gap: 26px;
+	display: grid;
+	gap: 4px;
+	font-size: 16px;
+	line-height: 25px;
+	grid-template-columns: 49px 1fr;
 }
 
-.online__item svg {
-	min-width: 64px;
+@media (min-width: 768px) {
+	.online__item {
+		gap: 20px;
+	}
+}
+
+@media (min-width: 1440px) {
+	.online__item {
+		gap: 26px;
+	}
+}
+
+@media (min-width: 768px) {
+	.online__item {
+		grid-template-columns: 52px 1fr;
+	}
+}
+
+@media (min-width: 1440px) {
+	.online__item {
+		font-size: 22px;
+		line-height: 36px;
+		grid-template-columns: 64px 1fr;
+	}
 }
 
 .online__cta {

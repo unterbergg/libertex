@@ -1,14 +1,22 @@
 .online {
   padding: 115px 0 80px 1px;
+  overflow-x: hidden;
   &__title {
     margin-bottom: 80px;
   }
   &__row {
     display: flex;
+    position: relative;
   }
   &__col {
-    width: 50%;
     display: flex;
+    width: 100%;
+    @include respond-to('tablet') {
+      width: 66%;
+    }
+    @include respond-to('desktop') {
+      width: 50%;
+    }
     img {
       max-width: 460px;
       object-fit: contain;
@@ -16,29 +24,71 @@
       min-height: 100%; 
     }
     &:has(img) {
+      position: relative;
       justify-content: flex-end;
-      padding-left: 100px;
-
+      
       display: none;
+      width: 40%;
       @include respond-to('tablet') {
+        position: absolute;
         display: block;
+        right: 0;
+        top: 50px;
+        z-index: -1;
+      }
+      @include respond-to('desktop') {
+        position: relative;
+        width: 50%;
+        padding-left: 100px;
+      }
+      &:after {
+        content: '';
+        display: block;
+        top: -50%;
+        bottom: 0;
+        right: -200%;
+        left: 50%;
+        background-image: url('/wp-content/themes/lbrtx/assets/img/Candles.png');
+        background-size: contain;
+        position: absolute;
+        z-index: -1;
+        @include respond-to('desktop') {
+          top: 0;
+          transform: translateX(2%);
+          bottom: 30%;
+        }
       }
     }
   }
   &__items {
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: 22px;
   }
   &__item {
-    font-size: 22px;
     font-family: $font__montblanc-semibold;
-    line-height: 36px;
-    display: flex;
-    gap: 26px;
-    svg {
-      min-width: 64px;
+    display: grid;
+    gap: 4px;
+    @include respond-to('tablet') {
+      gap: 20px;
     }
+    @include respond-to('desktop') {
+      gap: 26px;
+    }
+
+    font-size: 16px;
+    line-height: 25px;
+    grid-template-columns: 49px 1fr;
+    @include respond-to('tablet') {
+      grid-template-columns: 52px 1fr;
+    }
+    @include respond-to('desktop') {
+      font-size: 22px;
+      line-height: 36px;
+      grid-template-columns: 64px 1fr;
+    }
+
+    
   }
   &__cta {
     margin-top: 50px;

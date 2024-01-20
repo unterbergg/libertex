@@ -144,34 +144,44 @@ get_header();
 					<?php _e('Ключевые характеристики онлайн-платформы', 'lbrtx')?>
 				</h2>
 				<div class="online__row">
-					<div class="onliner__col">
+					<div class="online__col">
 						<div class="online__items">
 							<div class="online__item">
-								<?php echo file_get_contents(get_stylesheet_directory() . '/assets/icons/bitcoin_shadow.svg');?>	
+								<span class="online__icon">
+									<?php echo file_get_contents(get_stylesheet_directory() . '/assets/icons/bitcoin_shadow.svg');?>	
+								</span>
 								<span>
 									<?php _e('Все популярные финансовые инструменты в одной платформе.', 'lbrtx'); ?>		
 								</span>
 							</div>
 							<div class="online__item">
-								<?php echo file_get_contents(get_stylesheet_directory() . '/assets/icons/download_shadow.svg');?>	
+								<span class="online__icon">
+								<?php echo file_get_contents(get_stylesheet_directory() . '/assets/icons/download_shadow.svg');?>			
+								</span>
 								<span>
 									<?php _e('Не требует скачивания и установки.', 'lbrtx'); ?>		
 								</span>
 							</div>
 							<div class="online__item">
-								<?php echo file_get_contents(get_stylesheet_directory() . '/assets/icons/earth_shadow.svg');?>	
+								<span class="online__icon">
+								<?php echo file_get_contents(get_stylesheet_directory() . '/assets/icons/earth_shadow.svg');?>			
+								</span>
 								<span>
 									<?php _e('Встроенные инструменты для анализа рынка.', 'lbrtx'); ?>		
 								</span>
 							</div>
 							<div class="online__item">
-								<?php echo file_get_contents(get_stylesheet_directory() . '/assets/icons/money_shadow.svg');?>	
+								<span class="online__icon">
+								<?php echo file_get_contents(get_stylesheet_directory() . '/assets/icons/money_shadow.svg');?>			
+								</span>
 								<span>
 									<?php _e('Быстрый доступ к финансовым рынкам и отсутствие скрытых комиссий.', 'lbrtx'); ?>		
 								</span>
 							</div>
 							<div class="online__item">
-								<?php echo file_get_contents(get_stylesheet_directory() . '/assets/icons/shield_shadow.svg');?>	
+								<span class="online__icon">
+								<?php echo file_get_contents(get_stylesheet_directory() . '/assets/icons/shield_shadow.svg');?>			
+								</span>
 								<span>
 									<?php _e('Трехступенчатая система защиты ваших данных.', 'lbrtx'); ?>		
 								</span>
