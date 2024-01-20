@@ -3,11 +3,16 @@
   background-color: $color__bg-light;
   &__wrapper {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
-    gap: 35px;
+    gap: 30px;
+
+    justify-content: flex-start;
+    @include respond-to('tablet') {
+      justify-content: center;
+    }
     img {
-      max-height: 64px;
+      max-height: 36px;
     }
   }
 }

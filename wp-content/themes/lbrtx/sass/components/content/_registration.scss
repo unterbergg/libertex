@@ -1,0 +1,156 @@
+.registration {
+  margin-bottom: 80px;
+  &__bg {
+    height: 260px;
+    background-image: url('/wp-content/themes/lbrtx/assets/img/Zone.jpg');
+    background-position: bottom left;
+    background-size: cover;
+  }
+
+  
+  &__wrapper {
+    margin: -178px 0 30px 0;
+    background-color: $color__white;
+    border-radius: 4px;
+    border: 1px solid #EBEEF1;
+    box-shadow: 1px 4px 22px 0px rgba(231, 231, 231, 0.39);
+
+    padding: 1rem;
+    @include respond-to('mobile') {
+      padding: 30px 97px;
+    }
+  }
+  &__title {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  &__disclaimer {
+    color: $color__primary-dark;
+    font-size: 14px;
+    line-height: 20px;
+    margin: 30px 0;
+  }
+}
+
+.form {
+  position: relative;
+  .row {
+    &:not(.fxc-captcha-container) {
+      display: grid;
+      gap: 30px;
+
+      grid-template-columns: 100%;
+      @include respond-to('tablet') {
+        grid-template-columns: repeat(2, 50%);
+      }
+    }
+  }
+  .input-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    label {
+      color: $color__secondary;
+      font-family: $font__montblanc-semibold;
+      font-size: 14px;
+      line-height: 20px;
+      &.fxc-error-msg {
+        color: #FF424D;
+      }
+    }
+  }
+  .captcha-demo-wrapper {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 12px;
+  }
+  .fxc-captcha-refresh {
+    border-radius: 50%;
+    padding: 12px;
+    width: 40px;
+    height: 40px;
+    border: 0.5px solid #E0E0E0;
+    background-color: transparent;
+    display: flex;
+    padding: 12px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+  }
+  .checkboxes-wrapper {
+    margin-top: 28px;
+  }
+
+  input[type='text'], input[type='password'], input[type='email'], select, input[type='tel'], input[type='date'] {
+    padding: 16px;
+    height: 56px;
+    border-radius: 4px;
+    border: 1px solid #E0E0E0;
+    background: $color__primary-light;
+    font-family: sans-serif;
+  }
+  input.fxc-error-input {
+    border: 1px solid #BF001F;
+  }
+  input[type='submit'] {
+    font-family: $font__montblanc-semibold;
+    border-radius: 4px;
+    background: $color__accent;
+    padding: 13px 20px;
+    font-size: 18px;
+    line-height: 28px;
+    border: none;
+
+    width: auto;
+    @include respond-to('tablet') {
+      width: 448px;
+      margin: 50px auto 0 auto;
+    }
+  }
+
+  .form-control {
+    display: grid;
+    grid-template-columns: 1em auto;
+    gap: 1rem;
+    margin-bottom: 8px;
+    a {
+      display: inline;
+      text-decoration: underline;
+      font-size: 14px;
+      line-height: 20px;
+    }
+    input[type="checkbox"] {
+      appearance: none;
+      background-color: $color__white;
+      margin: 0;
+      color: currentColor;
+      width: 22px;
+      height: 22px;
+      border: 0.5px solid #E0E0E0;
+      border-radius: 4px;
+      transform: translateY(-0.075em);
+      
+      display: grid;
+      place-content: center;
+      &::before {
+        content: "";
+        width: 0.65em;
+        height: 0.65em;
+        transform: scale(0);
+        transition: 120ms transform ease-in-out;
+        box-shadow: inset 1em 1em $color__white;
+
+        transform-origin: bottom left;
+        clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+      }
+      &:checked::before {
+        transform: scale(1);
+      }
+      &:checked {
+        background-color: $color__accent;
+      }
+    }
+  }
+}

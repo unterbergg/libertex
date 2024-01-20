@@ -142,7 +142,12 @@ function lbrtx_scripts() {
 	wp_style_add_data( 'lbrtx-style', 'rtl', 'replace' );
 
 	wp_enqueue_script( 'lbrtx-custom', get_template_directory_uri() . '/js/custom.js', array(), _S_VERSION, true );
-
+	
+	if ( !is_front_page() ) {
+		wp_enqueue_script( 'lbrtx-fxclub', 'https://lib.fxclub.org/js/landing-api.js', array('lbrtx-jquery'), _S_VERSION, true );
+		wp_enqueue_script( 'lbrtx-jquery', 'https://lib.fxclub.org/js/jquery.js', array(), _S_VERSION, true );
+		wp_enqueue_script( 'lbrtx-registration', get_template_directory_uri() . '/js/registration.js', array('lbrtx-fxclub'), _S_VERSION, true );
+	}
 }
 add_action( 'wp_enqueue_scripts', 'lbrtx_scripts' );
 

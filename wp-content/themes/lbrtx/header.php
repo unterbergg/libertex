@@ -29,7 +29,6 @@
 					<?php _e('Совершение операций с беспоставочными внебиржевыми финансовыми инструментами имеет рискованный характер.
 					Возможность получения прибыли неразрывно связана с риском получения убытков.
 					При совершении операций к клиентам не переходят право собственности и иные права на базовые активы', 'lbrtx') ;?>
-					<a href="javaScript:void(0);" class="show">V</a>
 			</div>
 		</div>
 		<div class="header__top">
@@ -89,7 +88,7 @@
 					</ul>
 					<div class="header__buttons">
 						<a href="#"><?php _e('Войти', 'lbrtx'); ?></a>
-						<a href="#" class="button small">
+						<a href="<?php echo home_url();?>/registration" class="button small">
 							<?php _e('Регистрация', 'lbrtx'); ?>
 						</a>
 						<div class="header__hamburger open">

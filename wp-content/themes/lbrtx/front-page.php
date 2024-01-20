@@ -193,8 +193,13 @@ get_header();
 		<section class="partners">
 			<div class="wrapper">
 				<div class="partners__wrapper">
+					<img src="<?php echo get_template_directory_uri(); ?>/assets/img/visa.png" alt="Visa">
+					<img src="<?php echo get_template_directory_uri(); ?>/assets/img/mastercard.png" alt="Master Card">
 					<img src="<?php echo get_template_directory_uri(); ?>/assets/img/belcart.png" alt="Belcart">
+					<img src="<?php echo get_template_directory_uri(); ?>/assets/img/sberbank.png" alt="Sber">
+					<img src="<?php echo get_template_directory_uri(); ?>/assets/img/visa_sec.png" alt="Visa Secure">
 					<img src="<?php echo get_template_directory_uri(); ?>/assets/img/belcart2.png" alt="Belcart2">
+					<img src="<?php echo get_template_directory_uri(); ?>/assets/img/webpay.png" alt="Wbpat">
 				</div>
 			</div>
 		</section>
@@ -211,33 +216,45 @@ get_header();
 				</div>
 				<div class="news__items-large">
 					<a href="#" class="news__item">
-						<img src="" alt="">
+						<img 
+							src="<?php echo get_template_directory_uri(); ?>/assets/img/post1.jpg" 
+							alt="Post 1" 
+							class="news__thumb"
+						>
 						<h6 class="news__title">
 							Изменения в расписании совершения операций по ряду инструментов
 						</h6>
-						<p class="news__decsription">
+						<p class="news__description">
 							Уважаемые Клиенты!Просим вас обратить внимание на изменения в расписании совершения операций по ряду инструментов, 
 							которое произойдет в связи с грядущими в июле праздниками в США
 						</p>
 						<span class="news__meta">Пн, 08/26/2022 - 19:54</span>
 					</a>
 					<a href="#" class="news__item">
-						<img src="" alt="">
+						<img 
+							src="<?php echo get_template_directory_uri(); ?>/assets/img/post2.jpg" 
+							alt="Post 2"
+							class="news__thumb"
+						>
 						<h6 class="news__title">
 							Изменения в расписании совершения операций по ряду инструментов
 						</h6>
-						<p class="news__decsription">
+						<p class="news__description">
 							Уважаемые Клиенты!Просим вас обратить внимание на изменения в расписании совершения операций по ряду инструментов, 
 							которое произойдет в связи с грядущими в июле праздниками в США
 						</p>
 						<span class="news__meta">Пн, 08/26/2022 - 19:54</span>
 					</a>
 					<a href="#" class="news__item">
-						<img src="" alt="">
+						<img 
+							src="<?php echo get_template_directory_uri(); ?>/assets/img/post3.jpg" 
+							alt="Post 3"
+							class="news__thumb"
+						>
 						<h6 class="news__title">
 							Изменения в расписании совершения операций по ряду инструментов
 						</h6>
-						<p class="news__decsription">
+						<p class="news__description">
 							Уважаемые Клиенты!Просим вас обратить внимание на изменения в расписании совершения операций по ряду инструментов, 
 							которое произойдет в связи с грядущими в июле праздниками в США
 						</p>
@@ -253,36 +270,21 @@ get_header();
 						<span class="news__meta">Пн, 08/26/2022 - 19:54</span>
 					</a>
 					<a href="#" class="news__item">
-						<img src="" alt="">
 						<h6 class="news__title">
 							Изменения в расписании совершения операций по ряду инструментов
 						</h6>
-						<p class="news__decsription">
-							Уважаемые Клиенты!Просим вас обратить внимание на изменения в расписании совершения операций по ряду инструментов, 
-							которое произойдет в связи с грядущими в июле праздниками в США
-						</p>
 						<span class="news__meta">Пн, 08/26/2022 - 19:54</span>
 					</a>
 					<a href="#" class="news__item">
-						<img src="" alt="">
 						<h6 class="news__title">
 							Изменения в расписании совершения операций по ряду инструментов
 						</h6>
-						<p class="news__decsription">
-							Уважаемые Клиенты!Просим вас обратить внимание на изменения в расписании совершения операций по ряду инструментов, 
-							которое произойдет в связи с грядущими в июле праздниками в США
-						</p>
 						<span class="news__meta">Пн, 08/26/2022 - 19:54</span>
 					</a>
 					<a href="#" class="news__item">
-						<img src="" alt="">
 						<h6 class="news__title">
 							Изменения в расписании совершения операций по ряду инструментов
 						</h6>
-						<p class="news__decsription">
-							Уважаемые Клиенты!Просим вас обратить внимание на изменения в расписании совершения операций по ряду инструментов, 
-							которое произойдет в связи с грядущими в июле праздниками в США
-						</p>
 						<span class="news__meta">Пн, 08/26/2022 - 19:54</span>
 					</a>
 				</div>

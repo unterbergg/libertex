@@ -13,15 +13,14 @@
     grid-template-columns: 1fr;
     gap: 12px;
     @include respond-to('tablet') {
-      grid-template-columns: 1fr 1fr;
       gap: 20px;
     }
     @include respond-to('desktop') {
+      grid-template-columns: 1fr 1fr;
       gap: 12px;
     }
   }
   &__item {
-    padding: 16px 35px;
     border-radius: 4px;
     background: rgba(70, 70, 70, 0.50);
     display: flex;
@@ -29,6 +28,11 @@
     justify-content: space-between;
     gap: 18px;
     align-items: flex-start; 
+    
+    padding: 18px 20px;
+    @include respond-to('tablet') { 
+      padding: 16px 35px;
+    }
   }
   &__links {
     margin-top: 12px;

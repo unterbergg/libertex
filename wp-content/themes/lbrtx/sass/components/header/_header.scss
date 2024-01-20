@@ -9,6 +9,15 @@
     font-size: 12px;
     line-height: 17px;
     padding: 0.5rem 0;
+
+    svg {
+      margin-left: 5px;
+    }
+    &:not(.open) {
+      svg {
+        transform: rotate(180deg);
+      }
+    }
   }
   &__top {
     background-color: $color__primary-light;
@@ -104,6 +113,7 @@
           padding: 12px 0;
 
           a:not(.button) {
+            display: inline-block;
             color: $color__primary-dark;
             text-decoration: none;
 
@@ -140,6 +150,9 @@
           display: inline-block;
         }
       }
+      &.header__logo {
+        display: block;
+      }
     }
 
     &-mob {
@@ -149,6 +162,9 @@
       text-align: center;
       gap: 12px;
       margin-bottom: 20px;
+      a:not(.button) {
+        display: inline-block;
+      }
     }
   }
   &__close {
