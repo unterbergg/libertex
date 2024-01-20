@@ -18,16 +18,19 @@ document.addEventListener( 'DOMContentLoaded', ( e ) => {
 	const fullNotice = headerNotice.querySelector('.wrapper').innerHTML;
 	const shortNotice = fullNotice.slice(0, 100) + '...' + vector ;
 
+	const showNotice = () => {
+		headerNotice.classList.toggle('open');
+		headerNotice.querySelector('.wrapper').innerHTML = headerNotice.classList.contains('open') ? fullNotice + vector : shortNotice;
+	}
+
 	const toggleNotice = () => {
-		console.log('test')
+		console.log(window.innerWidth)
 		if (window.innerWidth < 768) {
 			headerNotice.querySelector('.wrapper').innerHTML = shortNotice;
-			headerNotice.addEventListener('click', () => {
-				headerNotice.classList.toggle('open');
-				headerNotice.querySelector('.wrapper').innerHTML = headerNotice.classList.contains('open') ? fullNotice + vector : shortNotice;
-			})
+			headerNotice.addEventListener('click', showNotice, true);
 		} else {
 			headerNotice.querySelector('.wrapper').innerHTML = fullNotice;
+			headerNotice.removeEventListener('click', showNotice, true);
 		}
 	}
 
