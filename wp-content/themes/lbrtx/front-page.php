@@ -25,10 +25,10 @@ get_header();
 				</h1>
 				<div class="hero__buttons">
 					<a href="" class="button rounded">
-						<?php _e('Открыть аккаунт', 'lbrtx'); ?>
+						<span><?php _e('Открыть аккаунт', 'lbrtx'); ?></span>
 					</a>
 					<a href="" class="button rounded ghost">
-						<?php _e('Демо-аккаунт', 'lbrtx'); ?>
+						<span><?php _e('Демо-аккаунт', 'lbrtx'); ?></span>
 					</a>
 				</div>
 				<div class="hero__img mobile-only">
@@ -184,7 +184,7 @@ get_header();
 				</div>
 				<div class="online__cta">
 					<a href="#" class="button">
-						<?php _e('Как инвестировать в Libertex', 'lbrtx'); ?>
+						<span><?php _e('Как инвестировать в Libertex', 'lbrtx'); ?></span>
 					</a>
 				</div>
 			</div>
@@ -328,7 +328,7 @@ get_header();
 							</p>
 						</div>
 						<a href="#" class="button">
-							Инвестировать сейчас
+							<span>Инвестировать сейчас</span>
 						</a>
 					</div>
 					<div class="apps__item">

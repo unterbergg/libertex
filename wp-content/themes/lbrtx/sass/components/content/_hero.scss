@@ -28,6 +28,12 @@
     z-index: 2;
     position: relative;
     flex-wrap: wrap;
+    .button:not(.ghost) {
+      transition: all 0.3s;
+			&:hover {
+				color: $color__white;
+			}
+    }
   }
   &__img {
     position: absolute;

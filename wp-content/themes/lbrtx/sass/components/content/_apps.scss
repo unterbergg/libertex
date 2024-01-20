@@ -21,9 +21,11 @@
     }
   }
   &__item {
+    position: relative;
+    overflow: hidden;
     border-radius: 4px;
     background: rgba(70, 70, 70, 0.50);
-    display: flex;
+    display: inline-flex;
     flex-direction: column;
     justify-content: space-between;
     gap: 18px;
@@ -32,6 +34,34 @@
     padding: 18px 20px;
     @include respond-to('tablet') { 
       padding: 16px 35px;
+    }
+    .button {
+      transition: all 0.3s;
+			&:hover {
+				color: $color__white;
+			}
+    }
+
+    transition: .5s ease-in-out;
+    &:before {
+      content: "";
+      background: linear-gradient(90deg, rgba(255, 255, 255, .1), rgba(255, 255, 255, .5));
+      
+      width: 150px;
+      position: absolute;
+      top: 0px;
+      bottom: 0;
+      left: -280px;
+      transform: skewX(-45deg);
+      filter: blur(20px);
+    }
+    &:hover {
+        background: rgba(70, 70, 70, 0.50);
+        color: #fff !important;
+    }
+    &:hover:before {
+        left: 130%;
+        transition: .6s ease-in-out;
     }
   }
   &__links {

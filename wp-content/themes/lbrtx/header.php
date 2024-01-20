@@ -38,6 +38,7 @@
 					<?php _e('+375 (33) 905-22-20', 'lbrtx'); ?>
 				</a>
 				<div>
+					<?php echo do_shortcode('[language-switcher]'); ?>
 					<ul>
 						<li class="mobile-only">
 							<a href="#">
@@ -89,7 +90,7 @@
 					<div class="header__buttons">
 						<a href="#"><?php _e('Войти', 'lbrtx'); ?></a>
 						<a href="<?php echo home_url();?>/registration" class="button small">
-							<?php _e('Регистрация', 'lbrtx'); ?>
+							<span><?php _e('Регистрация', 'lbrtx'); ?></span>
 						</a>
 						<div class="header__hamburger open">
 							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">

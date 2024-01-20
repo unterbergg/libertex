@@ -627,6 +627,7 @@ table {
 a {
 	text-decoration: none;
 	color: #161616;
+	transition: all 0.3s;
 }
 
 a:visited {
@@ -646,15 +647,20 @@ a:hover, a:active {
 }
 
 a.button {
+	position: relative;
 	display: inline-block;
 	color: #161616;
-	background-color: #FF6633;
 	border: 1px solid #FF6633;
 	padding: 12px 20px;
 	border-radius: 80px;
 	font-size: 18px;
 	font-family: "MontBlancSemiBold";
 	line-height: 28px;
+}
+
+a.button span {
+	z-index: 2;
+	position: relative;
 }
 
 a.button.ghost {
@@ -674,6 +680,52 @@ a.button.small {
 	font-size: 14px;
 	font-family: "MontBlancSemiBold";
 	line-height: 20px;
+}
+
+a.button.small::before {
+	border-radius: 4px !important;
+}
+
+a.button.small::after {
+	border-radius: 4px !important;
+}
+
+a.button:not(.ghost)::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	background-color: #FF6633;
+	transition: all 0.3s;
+	border-radius: 80px;
+}
+
+a.button:not(.ghost):hover::before {
+	opacity: 0;
+	transform: scale(0.5, 0.5);
+}
+
+a.button:not(.ghost)::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	opacity: 0;
+	transition: all 0.3s;
+	border: 1px solid #FF6633;
+	transform: scale(1.2, 1.2);
+	border-radius: 80px;
+}
+
+a.button:not(.ghost):hover::after {
+	opacity: 1;
+	transform: scale(1, 1);
 }
 
 /* Forms
@@ -892,7 +944,7 @@ textarea {
 	padding: 0.375rem 0;
 }
 
-.header__top > .wrapper, .header__top ul {
+.header__top > .wrapper, .header__top ul, .header__top .wrapper > div {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -927,6 +979,41 @@ textarea {
 	}
 }
 
+.header__top .trp-language-switcher {
+	width: auto;
+	height: auto;
+	margin-right: 1rem;
+}
+
+.header__top .trp-language-switcher .trp-ls-shortcode-current-language {
+	border: none;
+	padding: 0;
+	width: auto !important;
+	background-image: unset;
+	background-color: transparent;
+}
+
+.header__top .trp-language-switcher .trp-ls-shortcode-current-language a {
+	padding: 0;
+}
+
+.header__top .trp-language-switcher .trp-ls-shortcode-language {
+	left: unset;
+	right: 0;
+	padding: 0;
+	background-image: unset;
+	border: none;
+	width: auto !important;
+}
+
+.header__top .trp-language-switcher > div > a {
+	padding: 7px;
+}
+
+.header__top .trp-language-switcher > div > a img {
+	min-width: 18px;
+}
+
 .header__phone {
 	display: flex;
 	gap: 0.5rem;
@@ -942,6 +1029,10 @@ textarea {
 	justify-content: space-between;
 	align-items: center;
 	padding: 1rem 0;
+}
+
+.header__navigation a:hover {
+	text-decoration: underline;
 }
 
 .header__menu {
@@ -1200,6 +1291,14 @@ textarea {
 	z-index: 2;
 	position: relative;
 	flex-wrap: wrap;
+}
+
+.hero__buttons .button:not(.ghost) {
+	transition: all 0.3s;
+}
+
+.hero__buttons .button:not(.ghost):hover {
+	color: #fff;
 }
 
 .hero__img {
@@ -1575,20 +1674,53 @@ textarea {
 }
 
 .apps__item {
+	position: relative;
+	overflow: hidden;
 	border-radius: 4px;
 	background: rgba(70, 70, 70, 0.5);
-	display: flex;
+	display: inline-flex;
 	flex-direction: column;
 	justify-content: space-between;
 	gap: 18px;
 	align-items: flex-start;
 	padding: 18px 20px;
+	transition: .5s ease-in-out;
 }
 
 @media (min-width: 768px) {
 	.apps__item {
 		padding: 16px 35px;
 	}
+}
+
+.apps__item .button {
+	transition: all 0.3s;
+}
+
+.apps__item .button:hover {
+	color: #fff;
+}
+
+.apps__item:before {
+	content: "";
+	background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.5));
+	width: 150px;
+	position: absolute;
+	top: 0px;
+	bottom: 0;
+	left: -280px;
+	transform: skewX(-45deg);
+	filter: blur(20px);
+}
+
+.apps__item:hover {
+	background: rgba(70, 70, 70, 0.5);
+	color: #fff !important;
+}
+
+.apps__item:hover:before {
+	left: 130%;
+	transition: .6s ease-in-out;
 }
 
 .apps__links {
