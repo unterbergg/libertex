@@ -45,7 +45,7 @@ get_header();
 				</h2>
 				<div class="tools__grid">
 					<div class="tools__item">
-						<div>
+						<div class="tools__icon">
 							<?php echo file_get_contents(get_stylesheet_directory() . '/assets/icons/circum_dollar.svg');?>
 						</div>
 						<h5>
@@ -57,61 +57,70 @@ get_header();
 						<img class="tools__item-bg" src="<?php echo get_template_directory_uri();?>/assets/img/flags_bg.png" alt="">
 					</div>
 					<div class="tools__item">
-						<div>
+						<div class="tools__icon">
 							<?php echo file_get_contents(get_stylesheet_directory() . '/assets/icons/circ_water.svg');?>
 						</div>
 						<h5>
-							<?php _e('Валюты', 'lbrtx'); ?>
+							<?php _e('Нефть и фьючерсные контракты', 'lbrtx'); ?>
 						</h5>
 						<p>
-							<?php _e('Позволяют совершать инвестиции практически на любых событиях в мире. Котировки валют меняются 5 дней в неделю, круглосуточно, ежеминутно.', 'lbrtx'); ?>
+							<?php _e('Различные сорта нефти, природный газ и мазут — беспоставочные внебиржевые финансовые инстру-менты с высокой волатильностью и хорошим потенциалом для инвестиций как в краткосрочной, так и в долгосрочной перспективе.', 'lbrtx'); ?>
 						</p>
+						<img class="tools__item-bg" src="<?php echo get_template_directory_uri();?>/assets/img/flame.png" alt="">
 					</div>
 					<div class="tools__item">
-						<div>
-							<?php echo file_get_contents(get_stylesheet_directory() . '/assets/icons/gold.svg');?>
-							
+						<div class="tools__icon">
+							<img src="<?php echo get_template_directory_uri(); ?>/assets/icons/gold.png" alt="gold">
 						</div>
 						<h5>
-							<?php _e('Валюты', 'lbrtx'); ?>
+							<?php _e('Фьючерсы на металлы', 'lbrtx'); ?>
 						</h5>
 						<p>
-							<?php _e('Позволяют совершать инвестиции практически на любых событиях в мире. Котировки валют меняются 5 дней в неделю, круглосуточно, ежеминутно.', 'lbrtx'); ?>
+							<?php _e('Драгоценные металлы — традиционные беспоставочные внебиржевые финансовые инструменты инвестора, которые помогают стабилизировать инвестиционный портфель. Фьючерсы на металлы обладают более высоким потенциалом доходности по сравнению с многими валютными парами.', 'lbrtx'); ?>
 						</p>
+						<img class="tools__item-bg" src="<?php echo get_template_directory_uri();?>/assets/img/gold.png" alt="">
 					</div>
 					<div class="tools__item">
-						<div>
-							<?php echo file_get_contents(get_stylesheet_directory() . '/assets/icons/circ_flag.svg');?>
+						<div class="tools__icon">
+							<img src="<?php echo get_template_directory_uri(); ?>/assets/icons/circ_flag.png" alt="flag">
 						</div>
 						<h5>
-							<?php _e('Валюты', 'lbrtx'); ?>
+							<?php _e('Фондовые индексы', 'lbrtx'); ?>
 						</h5>
 						<p>
-							<?php _e('Позволяют совершать инвестиции практически на любых событиях в мире. Котировки валют меняются 5 дней в неделю, круглосуточно, ежеминутно.', 'lbrtx'); ?>
+							<?php _e('Фондовые индексы ― это возможность открывать позиции в рост или в снижение всего рынка сразу и инвестировать в глобальный рост или падение крупнейших мировых экономик. Фондовые индексы ― надежный, проверенный временем и кризисами инструмент, доходность которого может опережать инфляцию и ставки по банковским депозитам.', 'lbrtx'); ?>
 						</p>
+						<img class="tools__item-bg" src="<?php echo get_template_directory_uri();?>/assets/img/americanFlag.png" alt="">
 					</div>
 					<div class="tools__item">
-						<div>
-							<?php echo file_get_contents(get_stylesheet_directory() . '/assets/icons/circ_apple.svg');?>
+						<div class="tools__icon">
+							<img src="<?php echo get_template_directory_uri(); ?>/assets/icons/circ_apple.png" alt="flag">
 						</div>
 						<h5>
-							<?php _e('Валюты', 'lbrtx'); ?>
+							<?php _e('Акции', 'lbrtx'); ?>
 						</h5>
 						<p>
-							<?php _e('Позволяют совершать инвестиции практически на любых событиях в мире. Котировки валют меняются 5 дней в неделю, круглосуточно, ежеминутно.', 'lbrtx'); ?>
+							<?php _e('Инвестируйте в реальный бизнес! CFD на ценные бумаги позволяют совершать долгосрочные вложениях в ценные бумаги крупнейших мировых компаний (например, Apple, Google,Tesla и др.), а также инвестировать в краткосрочные трендовые изменения.', 'lbrtx'); ?>
 						</p>
+						<img class="tools__item-bg" src="<?php echo get_template_directory_uri();?>/assets/img/apple.png" alt="">
 					</div>
 					<div class="tools__item">
-						<div>
+						<div class="tools__icon">
 							<?php echo file_get_contents(get_stylesheet_directory() . '/assets/icons/circ_bitcoin.svg');?>
 						</div>
 						<h5>
-							<?php _e('Валюты', 'lbrtx'); ?>
+							<?php _e('Криптовалюты', 'lbrtx'); ?>
 						</h5>
 						<p>
-							<?php _e('Позволяют совершать инвестиции практически на любых событиях в мире. Котировки валют меняются 5 дней в неделю, круглосуточно, ежеминутно.', 'lbrtx'); ?>
+							<?php _e('Криптовалюта — это цифровые деньги, создаваемые пользователями специальных пиринговых сетей. Криптовалюты не привязаны к реальным валютам, а их количество изначально ограничено алгоритмом.', 'lbrtx'); ?>
 						</p>
+						<img class="tools__item-bg" src="<?php echo get_template_directory_uri();?>/assets/img/binanceCoin.png" alt="">
 					</div>
+				</div>
+				<div class="tools__link">
+					<a href="javascript:void(0);" class="tools__more">
+						<?php _e('Еще инструменты', 'lbrtx'); ?>
+					</a>
 				</div>
 			</div>
 		</section>

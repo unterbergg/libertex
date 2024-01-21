@@ -34,4 +34,10 @@ document.addEventListener( 'DOMContentLoaded', ( e ) => {
 
 	toggleNotice();
 	window.addEventListener('resize', toggleNotice, true);
+
+	const tools = document.querySelector('.tools__grid');
+	document.querySelector('.tools__more').addEventListener('click', e => {
+		tools.classList.add('open-tools');
+	})
+	window.addEventListener('resize', () => {tools.classList.remove('open-tools')}, true);
 } );
