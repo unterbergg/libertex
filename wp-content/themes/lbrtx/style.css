@@ -996,6 +996,7 @@ textarea {
 	background-image: unset;
 	border: none;
 	width: auto !important;
+	z-index: 3;
 }
 
 .header__top .trp-language-switcher > div > a {
@@ -1262,15 +1263,30 @@ body.open .header__menu-mobile {
 	position: relative;
 	padding: 50px 0 48px 0;
 	background-image: url("/wp-content/themes/lbrtx/assets/img/hero_bg.jpeg");
-	background-size: cover;
 	background-repeat: repeat-x;
-	background-position: 0%;
+	overflow-x: hidden;
+	background-position: 10%;
+	background-size: cover;
+}
+
+@media screen and (max-width: 480px) {
+	.hero {
+		background-position: 40%;
+	}
+}
+
+@media (min-width: 640px) {
+	.hero {
+		background-position: 30%;
+		background-size: 205%;
+	}
 }
 
 @media (min-width: 768px) {
 	.hero {
 		background-position: 60%;
 		padding: 88px 0 125px 0;
+		background-size: cover;
 	}
 }
 
@@ -1311,10 +1327,17 @@ body.open .header__menu-mobile {
 	top: 0;
 	bottom: 0;
 	z-index: 1;
+	transform: translateX(50%);
 }
 
 .hero__img img {
 	height: 100%;
+}
+
+@media (min-width: 640px) {
+	.hero__img {
+		transform: unset;
+	}
 }
 
 .tools {

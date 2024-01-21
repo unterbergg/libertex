@@ -2,13 +2,22 @@
   position: relative;
   padding: 50px 0 48px 0;
   background-image: url('/wp-content/themes/lbrtx/assets/img/hero_bg.jpeg');
-  background-size: cover;
   background-repeat: repeat-x;
+  overflow-x: hidden;
 
-  background-position: 0%;
+  background-position: 10%;
+  background-size: cover;
+  @media screen and (max-width: 480px) {
+    background-position: 40%;
+  }
+  @include respond-to('mobile') { 
+    background-position: 30%;
+    background-size: 205%;
+  }
   @include respond-to('tablet') {
     background-position: 60%;
     padding: 88px 0 125px 0;
+    background-size: cover;
   }
   @include respond-to('desktop') {
     background-position: 40%;
@@ -43,6 +52,11 @@
     z-index: 1;
     img {
       height: 100%;
+    }
+
+    transform: translateX(50%);
+    @include respond-to('mobile') {
+      transform: unset;
     }
   }
 }
