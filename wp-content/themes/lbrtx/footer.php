@@ -46,48 +46,15 @@
 					</div>
 				</div>
 				<div class="footer__col">
-					<ul class="footer__menu">
-						<li>
-							<a href="#">
-								<?php _e('Как начать инвестировать', 'lbrtx'); ?>
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<?php _e('Платформы', 'lbrtx'); ?>
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<?php _e('Акции', 'lbrtx'); ?>
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<?php _e('Помощь', 'lbrtx'); ?>
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<?php _e('Новости', 'lbrtx'); ?>
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<?php _e('О компании', 'lbrtx'); ?>
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<?php _e('Наши офисы', 'lbrtx'); ?>
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<?php _e('Центр Поддержки', 'lbrtx'); ?>
-							</a>
-						</li>
-					</ul>
+					<?php 
+						$footerNav = wp_nav_menu( [
+							'menu'            => 'footer__menu',
+							'menu_class'      => 'footer__menu',
+							'items_wrap'      => '<ul class="%2$s">%3$s</ul>',
+							'echo'						=> false,
+						] );
+						echo str_replace('$lang', str_replace('_', '-', get_locale()), $footerNav);
+					?>
 				</div>
 			</div>
 		</div>

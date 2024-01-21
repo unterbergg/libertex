@@ -214,92 +214,51 @@ get_header();
 			</div>
 		</section>
 
-		<section class="news">
-			<div class="wrapper">
-				<div class="news__header">
-					<h2 class="news__title">
-						Новости
-					</h2>
-					<a href="#" class="button ghost accent">
-						Читать все
-					</a>
+		
+		<?php $recent_posts_array = get_posts(['numberposts' => 7]); ?>
+		<?php if(!empty($recent_posts_array)) : ?>
+			<section class="news">
+				<div class="wrapper">
+					<div class="news__header">
+						<h2 class="news__title">
+							Новости
+						</h2>
+						<a href="#" class="button ghost accent">
+							Читать все
+						</a>
+					</div>
+					<div class="news__items-large">
+						<?php foreach(array_slice($recent_posts_array, 0, 3) as $item) : ?>
+							<a href="<?php echo get_field('original_url', $item->ID); ?>" class="news__item">
+								<?php echo get_the_post_thumbnail($item->ID, 'medium', ['class' => 'news__thumb']); ?>
+								<h6 class="news__title">
+									<?php echo $item->post_title; ?>
+								</h6>
+								<p class="news__description">
+								<?php echo $item->post_excerpt; ?>
+								</p>
+								<span class="news__meta">
+									<?php echo get_the_date( "D, m/d/Y - H:i", $item->ID ); ?>
+								</span>
+							</a>
+						<?php endforeach; ?>
+					</div>
+					<?php if (!empty(array_slice($recent_posts_array, 3, 4))) : ?>
+						<hr>
+						<div class="news__items">
+							<?php foreach(array_slice($recent_posts_array, 3) as $item) : ?>
+								<a href="<?php echo get_field('original_url', $item->ID); ?>" class="news__item">
+									<h6 class="news__title">
+										<?php echo $item->post_title; ?>
+									</h6>
+									<span class="news__meta"><?php echo get_the_date( "D, m/d/Y - H:i", $item->ID ); ?></span>
+								</a>
+							<?php endforeach; ?>
+						</div>
+					<?php endif; ?>
 				</div>
-				<div class="news__items-large">
-					<a href="#" class="news__item">
-						<img 
-							src="<?php echo get_template_directory_uri(); ?>/assets/img/post1.jpg" 
-							alt="Post 1" 
-							class="news__thumb"
-						>
-						<h6 class="news__title">
-							Изменения в расписании совершения операций по ряду инструментов
-						</h6>
-						<p class="news__description">
-							Уважаемые Клиенты!Просим вас обратить внимание на изменения в расписании совершения операций по ряду инструментов, 
-							которое произойдет в связи с грядущими в июле праздниками в США
-						</p>
-						<span class="news__meta">Пн, 08/26/2022 - 19:54</span>
-					</a>
-					<a href="#" class="news__item">
-						<img 
-							src="<?php echo get_template_directory_uri(); ?>/assets/img/post2.jpg" 
-							alt="Post 2"
-							class="news__thumb"
-						>
-						<h6 class="news__title">
-							Изменения в расписании совершения операций по ряду инструментов
-						</h6>
-						<p class="news__description">
-							Уважаемые Клиенты!Просим вас обратить внимание на изменения в расписании совершения операций по ряду инструментов, 
-							которое произойдет в связи с грядущими в июле праздниками в США
-						</p>
-						<span class="news__meta">Пн, 08/26/2022 - 19:54</span>
-					</a>
-					<a href="#" class="news__item">
-						<img 
-							src="<?php echo get_template_directory_uri(); ?>/assets/img/post3.jpg" 
-							alt="Post 3"
-							class="news__thumb"
-						>
-						<h6 class="news__title">
-							Изменения в расписании совершения операций по ряду инструментов
-						</h6>
-						<p class="news__description">
-							Уважаемые Клиенты!Просим вас обратить внимание на изменения в расписании совершения операций по ряду инструментов, 
-							которое произойдет в связи с грядущими в июле праздниками в США
-						</p>
-						<span class="news__meta">Пн, 08/26/2022 - 19:54</span>
-					</a>
-				</div>
-				<hr>
-				<div class="news__items">
-					<a href="#" class="news__item">
-						<h6 class="news__title">
-							Изменения в расписании совершения операций по ряду инструментов
-						</h6>
-						<span class="news__meta">Пн, 08/26/2022 - 19:54</span>
-					</a>
-					<a href="#" class="news__item">
-						<h6 class="news__title">
-							Изменения в расписании совершения операций по ряду инструментов
-						</h6>
-						<span class="news__meta">Пн, 08/26/2022 - 19:54</span>
-					</a>
-					<a href="#" class="news__item">
-						<h6 class="news__title">
-							Изменения в расписании совершения операций по ряду инструментов
-						</h6>
-						<span class="news__meta">Пн, 08/26/2022 - 19:54</span>
-					</a>
-					<a href="#" class="news__item">
-						<h6 class="news__title">
-							Изменения в расписании совершения операций по ряду инструментов
-						</h6>
-						<span class="news__meta">Пн, 08/26/2022 - 19:54</span>
-					</a>
-				</div>
-			</div>
-		</section>
+			</section>
+		<?php endif; ?>
 
 		<section class="apps">
 			<div class="wrapper">
@@ -396,6 +355,41 @@ get_header();
 				<div class="apps__cta">
 					<a href="#" class="button ghost">
 						Подробнее
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<section class="about">
+			<div class="wrapper">
+				<div class="about__row">
+					<div class="about__col">
+						<div>
+							<h3 class="about__title">
+								О компании Forex Club
+							</h3>
+							<p class="about__text">
+								Помогаем нашим клиентам инвестировать в CFD на акции, фондовые индексы, валюты, драгоценные металлы, нефть и фьючерсные контракты.
+							</p>
+							<a href="#" class="about__link"><?php _e('Узнать больше', 'lbrtx'); ?></a>
+						</div>
+						<div>
+							<h3 class="about__title">
+								Как инвестировать?
+							</h3>
+							<p class="about__text">
+								Чтобы начать инвестировать нужно сделать 4 простых шага...
+							</p>
+							<a href="#" class="about__link"><?php _e('Узнать больше', 'lbrtx'); ?></a>
+						</div>
+					</div>
+					<div class="about__col">
+						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/About.jpg" alt="About block">
+					</div>
+				</div>
+				<div class="about__cta">
+					<a href="#" class="button">
+						<span><?php _e('Открыть аккаунт', 'lbrtx'); ?></span>
 					</a>
 				</div>
 			</div>

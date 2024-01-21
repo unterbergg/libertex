@@ -1,8 +1,20 @@
 @font-face {
+  font-family: 'MontHeavy';
+  src: url('/wp-content/themes/lbrtx/assets/fonts/mont/Mont-Heavy.eot');
+  src: url('/wp-content/themes/lbrtx/assets/fonts/mont/Mont-Heavy.woff2') format('woff2'),
+        url('/wp-content/themes/lbrtx/assets/fonts/mont/Mont-Heavy.ttf') format('truetype');
+}
+@font-face {
   font-family: 'MontBold';
   src: url('/wp-content/themes/lbrtx/assets/fonts/mont/Mont-Bold.eot');
   src: url('/wp-content/themes/lbrtx/assets/fonts/mont/Mont-Bold.woff2') format('woff2'),
         url('/wp-content/themes/lbrtx/assets/fonts/mont/Mont-Bold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'MontSemibold';
+  src: url('/wp-content/themes/lbrtx/assets/fonts/mont/Mont-SemiBold.eot');
+  src: url('/wp-content/themes/lbrtx/assets/fonts/mont/Mont-SemiBold.woff2') format('woff2'),
+        url('/wp-content/themes/lbrtx/assets/fonts/mont/Mont-SemiBold.ttf') format('truetype');
 }
 
 @font-face {
@@ -23,7 +35,9 @@ $font__pre: "Courier 10 Pitch", courier, monospace;
 $font__line-height-body: 1.5;
 $font__line-height-pre: 1.6;
 
+$font__mont-heavy: 'MontHeavy';
 $font__mont-bold: 'MontBold';
+$font__mont-semibold: 'MontSemiBold';
 $font__montblanc-regular: 'MontBlanc';
 $font__montblanc-semibold: 'MontBlancSemiBold';
 $font__montblanc-bold: 'MontBlancBold';

@@ -65,26 +65,13 @@
 					<a href="<?php echo home_url(); ?>" class="header__logo">
 						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.svg" alt="Logo">
 					</a>
-					<ul class="header__menu">
-						<li>
-							<a href="#"><?php _e('Центр Поддержки', 'lbrtx'); ?></a>
-						</li>
-						<li>
-							<a href="#"><?php _e('Платформы', 'lbrtx'); ?></a>
-						</li>
-						<li>
-							<a href="#"><?php _e('Акции', 'lbrtx'); ?></a>
-						</li>
-						<li>
-							<a href="#"><?php _e('Помощь', 'lbrtx'); ?></a>
-						</li>
-						<li>
-							<a href="#"><?php _e('Новости', 'lbrtx'); ?></a>
-						</li>
-						<li>
-							<a href="#"><?php _e('О компании', 'lbrtx'); ?></a>
-						</li>
-					</ul>
+					<?php 
+						wp_nav_menu( [
+							'menu'            => 'header__menu',
+							'menu_class'      => 'header__menu',
+							'items_wrap'      => '<ul class="%2$s">%3$s</ul>',
+						] );
+					?>
 					<div class="header__buttons">
 						<a href="#"><?php _e('Войти', 'lbrtx'); ?></a>
 						<a href="<?php echo home_url();?>/registration" class="button small">
@@ -115,29 +102,16 @@
 								<div class="header__buttons-mob">
 									<a href="#"><?php _e('Войти', 'lbrtx'); ?></a>
 									<a href="#" class="button small">
-										<?php _e('Регистрация', 'lbrtx'); ?>
+										<span><?php _e('Регистрация', 'lbrtx'); ?></span>
 									</a>
 								</div>
-								<ul>
-									<li>
-										<a href="#"><?php _e('Центр Поддержки', 'lbrtx'); ?></a>
-									</li>
-									<li>
-										<a href="#"><?php _e('Платформы', 'lbrtx'); ?></a>
-									</li>
-									<li>
-										<a href="#"><?php _e('Акции', 'lbrtx'); ?></a>
-									</li>
-									<li>
-										<a href="#"><?php _e('Помощь', 'lbrtx'); ?></a>
-									</li>
-									<li>
-										<a href="#"><?php _e('Новости', 'lbrtx'); ?></a>
-									</li>
-									<li>
-										<a href="#"><?php _e('О компании', 'lbrtx'); ?></a>
-									</li>
-								</ul>
+								<?php 
+									wp_nav_menu( [
+										'menu'            => 'header__menu',
+										'menu_class'      => '',
+										'items_wrap'      => '<ul>%3$s</ul>',
+									] );
+								?>
 							</div>
 						</div>
 					</div>

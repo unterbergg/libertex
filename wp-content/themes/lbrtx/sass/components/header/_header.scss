@@ -95,7 +95,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 1rem 0;
-    a {
+    a:not(.button) {
       &:hover {
         text-decoration: underline;
       }
