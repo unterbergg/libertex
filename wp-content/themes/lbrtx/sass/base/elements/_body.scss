@@ -5,7 +5,12 @@ body {
 
 html {
 	overflow-x: hidden;
+	margin-top: 0 !important;
 	&:has(body.open) {
 		overflow: hidden;
 	}
+}
+
+#wpadminbar {
+	display: none !important;
 }

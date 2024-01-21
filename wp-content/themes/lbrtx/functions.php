@@ -178,4 +178,4 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
-add_filter('show_admin_bar', '__return_true');
+add_filter('show_admin_bar', '__return_false');

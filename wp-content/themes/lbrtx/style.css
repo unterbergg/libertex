@@ -568,10 +568,15 @@ body {
 
 html {
 	overflow-x: hidden;
+	margin-top: 0 !important;
 }
 
 html:has(body.open) {
 	overflow: hidden;
+}
+
+#wpadminbar {
+	display: none !important;
 }
 
 hr {
