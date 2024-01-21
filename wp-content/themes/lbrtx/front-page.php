@@ -24,10 +24,10 @@ get_header();
 					<span class="text-colored">Forex Club</span>
 				</h1>
 				<div class="hero__buttons">
-					<a href="" class="button rounded">
+					<a href="#" class="button rounded">
 						<span><?php _e('Открыть аккаунт', 'lbrtx'); ?></span>
 					</a>
-					<a href="" class="button rounded ghost">
+					<a href="#" class="button rounded ghost">
 						<span><?php _e('Демо-аккаунт', 'lbrtx'); ?></span>
 					</a>
 				</div>
@@ -244,7 +244,7 @@ get_header();
 									<?php echo $item->post_title; ?>
 								</h6>
 								<p class="news__description">
-								<?php echo $item->post_excerpt; ?>
+									<?php echo $item->post_excerpt; ?>
 								</p>
 								<span class="news__meta">
 									<?php echo get_the_date( "D, m/d/Y - H:i", $item->ID ); ?>
@@ -285,10 +285,10 @@ get_header();
 							</p>
 						</div>
 						<div class="apps__links">
-							<a href="#">
+							<a href="https://fxclubbelarus.onelink.me/cy6g/f50t74bq">
 								<?php echo file_get_contents(get_stylesheet_directory() . '/assets/img/app_store.svg');?>
 							</a>
-							<a href="#">
+							<a href="https://fxclubbelarus.onelink.me/cy6g/z9igp6no">
 								<?php echo file_get_contents(get_stylesheet_directory() . '/assets/img/google_play.svg');?>
 							</a>
 						</div>
@@ -305,7 +305,7 @@ get_header();
 							Все в одной платформе.
 							</p>
 						</div>
-						<a href="#" class="button">
+						<a href="https://fxclub.by/start-libertex" class="button">
 							<span>Инвестировать сейчас</span>
 						</a>
 					</div>
@@ -347,14 +347,14 @@ get_header();
 							</p>
 						</div>
 						<div>
-							<a href="#" class="apps__link">
+							<a href="https://fxclub.by/metatrader/download" class="apps__link">
 								Скачать MetaTrader 4 для ПК
 							</a>
 							<div class="apps__links">
-								<a href="#" class="apps__link">
+								<a href="https://fxclub.by/news/mobilnye-versii-mt4-i-mt5-ot-razrabotchika-metaquotes-vremenno-nedostupny-v-magazine-appstore" class="apps__link">
 									<?php echo file_get_contents(get_stylesheet_directory() . '/assets/img/app_store.svg');?>
 								</a>
-								<a href="#" class="apps__link">
+								<a href="https://fxclub.by/metatrader/android" class="apps__link">
 									<?php echo file_get_contents(get_stylesheet_directory() . '/assets/img/google_play.svg');?>
 								</a>
 							</div>
@@ -380,7 +380,7 @@ get_header();
 							<p class="about__text">
 								Помогаем нашим клиентам инвестировать в CFD на акции, фондовые индексы, валюты, драгоценные металлы, нефть и фьючерсные контракты.
 							</p>
-							<a href="#" class="about__link"><?php _e('Узнать больше', 'lbrtx'); ?></a>
+							<a href="https://fxclub.by/about" class="about__link"><?php _e('Узнать больше', 'lbrtx'); ?></a>
 						</div>
 						<div>
 							<h3 class="about__title">
@@ -389,7 +389,7 @@ get_header();
 							<p class="about__text">
 								Чтобы начать инвестировать нужно сделать 4 простых шага...
 							</p>
-							<a href="#" class="about__link"><?php _e('Узнать больше', 'lbrtx'); ?></a>
+							<a href="https://fxclub.by/start-trading/" class="about__link"><?php _e('Узнать больше', 'lbrtx'); ?></a>
 						</div>
 					</div>
 					<div class="about__col">
