@@ -740,6 +740,7 @@ a.button:not(.ghost):hover::after {
 	justify-content: center;
 	cursor: pointer;
 	border: none;
+	z-index: 9;
 }
 
 input[type="text"],
@@ -1052,7 +1053,7 @@ textarea {
 .header__menu-mobile {
 	position: fixed;
 	height: 100vh;
-	top: -100%;
+	top: -150%;
 	bottom: 0;
 	right: 0;
 	left: 0;
@@ -1153,7 +1154,6 @@ textarea {
 .header__hamburger {
 	display: inline-block;
 	position: relative;
-	margin-left: 12px;
 	width: 24px;
 	height: 24px;
 	cursor: pointer;
@@ -1269,14 +1269,15 @@ body.open .header__menu-mobile {
 	padding: 50px 0 48px 0;
 	background-image: url("/wp-content/themes/lbrtx/assets/img/hero_bg.jpeg");
 	background-repeat: repeat-x;
-	overflow-x: hidden;
+	overflow: hidden;
 	background-position: 10%;
-	background-size: cover;
+	background-size: 205%;
 }
 
 @media screen and (max-width: 480px) {
 	.hero {
-		background-position: 40%;
+		background-position: 35%;
+		background-size: cover;
 	}
 }
 
@@ -1303,10 +1304,22 @@ body.open .header__menu-mobile {
 }
 
 .hero__title {
-	width: calc(100% / 12 * 7);
 	color: #fff;
 	z-index: 2;
 	position: relative;
+	width: 100%;
+}
+
+@media (min-width: 640px) {
+	.hero__title {
+		width: 80%;
+	}
+}
+
+@media (min-width: 1440px) {
+	.hero__title {
+		width: calc(100% / 12 * 7);
+	}
 }
 
 .hero__buttons {
@@ -2037,7 +2050,6 @@ body.open .header__menu-mobile {
 	position: absolute;
 	right: 0;
 	bottom: 0;
-	max-width: 300px;
 	display: none;
 }
 
@@ -2045,13 +2057,20 @@ body.open .header__menu-mobile {
 	.about__col:has(img) {
 		display: block;
 	}
+	.about__col:has(img) img {
+		max-width: 300px;
+	}
 }
 
 @media (min-width: 1440px) {
 	.about__col:has(img) {
+		display: flex;
+		justify-content: center;
+		align-items: flex-end;
 		position: static;
 	}
 	.about__col:has(img) img {
+		max-width: unset;
 		transition: all 0.5s;
 	}
 	.about__col:has(img) img:hover {

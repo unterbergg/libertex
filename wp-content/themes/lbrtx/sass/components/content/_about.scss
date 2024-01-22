@@ -53,14 +53,20 @@
       position: absolute;
       right: 0;
       bottom: 0;
-      max-width: 300px;
       display: none;
       @include respond-to('tablet') { 
         display: block;
+        img { 
+          max-width: 300px;
+        }
       }
       @include respond-to('desktop') {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
         position: static;
         img {
+          max-width: unset;
           transition: all 0.5s;
           &:hover {
             transform: scale(1.2);

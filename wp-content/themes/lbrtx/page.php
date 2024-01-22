@@ -99,7 +99,7 @@ get_header();
                           </div>
                       </div>
                       <label class="label" for="birthday">
-                        <?php echo _e('Поверочный код', 'lbrtx'); ?>
+                        Поверочный код
                       </label>
                       <input class="input input-text" type="text" id="captcha" name="captcha">
                   </div>
