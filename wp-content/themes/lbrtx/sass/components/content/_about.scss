@@ -74,35 +74,37 @@
         }
       }
     }
-  }
-  &__title {
-    font-family: $font__mont-heavy;
-    line-height: 40px;
 
-    font-size: 26px;
-    @include respond-to('desktop') {
-      font-size: 32px;
+    h3 {
+      font-family: $font__mont-heavy;
+      line-height: 40px;
+  
+      font-size: 26px;
+      @include respond-to('desktop') {
+        font-size: 32px;
+      }
+    }
+    p {
+      &:not(:has(a)){margin-bottom: 16px;
+      font-family: $font__mont-semibold;
+  
+      font-size: 16px;  
+      line-height: 25px;
+      @include respond-to('desktop') {
+        font-size: 22px;
+        line-height: 36px;
+      }}
+    }
+    a {
+      font-size: 18px;
+      color: $color__accent;
+      text-decoration: underline;
+      &:hover {
+        text-decoration: none;
+      }
     }
   }
-  &__text {
-    margin-bottom: 16px;
-    font-family: $font__mont-semibold;
-
-    font-size: 16px;  
-    line-height: 25px;
-    @include respond-to('desktop') {
-      font-size: 22px;
-      line-height: 36px;
-    }
-  }
-  &__link {
-    font-size: 18px;
-    color: $color__accent;
-    text-decoration: underline;
-    &:hover {
-      text-decoration: none;
-    }
-  }
+  
   &__cta {
     text-align: center;
     margin-top: 80px;

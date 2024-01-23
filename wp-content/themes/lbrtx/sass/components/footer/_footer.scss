@@ -28,8 +28,11 @@
     a {
       text-decoration-line: underline;
       color: $color__primary-dark;
+      &:hover {
+        text-decoration-line: none;
+      }
     }
-    .text-3 {
+    strong {
       color: $color__primary-dark;
     }
   }

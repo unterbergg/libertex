@@ -64,9 +64,12 @@
     @include respond-to('desktop') {
       padding: 12px 16px;
     }
-  }
-  &__title {
-    margin-top: 15px;
+
+    &:hover {
+      .news__title {
+        color: $color__accent;
+      }
+    }
   }
   &__description {
     font-size: 14px;

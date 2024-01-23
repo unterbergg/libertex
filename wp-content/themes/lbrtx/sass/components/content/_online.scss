@@ -5,12 +5,14 @@
   @include respond-to('mobile') {
     padding: 115px 0 80px 0;
   }
-  &__title {
+  h2 {
+
     margin-bottom: 30px;
     @include respond-to('tablet') {
       margin-bottom: 60px;
     }
     @include respond-to('desktop') {
+      width: 80%;
       margin-bottom: 80px;
     }
   }
@@ -37,7 +39,7 @@
         transform: scale(1.2);
       }
     }
-    &:has(img) {
+    &:last-child {
       position: relative;
       justify-content: flex-end;
       

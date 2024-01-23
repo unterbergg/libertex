@@ -102,83 +102,44 @@ function lbrtx_setup() {
 }
 add_action( 'after_setup_theme', 'lbrtx_setup' );
 
-/**
- * Set the content width in pixels, based on the theme's design and stylesheet.
- *
- * Priority 0 to make it available to lower priority callbacks.
- *
- * @global int $content_width
- */
-function lbrtx_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'lbrtx_content_width', 640 );
-}
-add_action( 'after_setup_theme', 'lbrtx_content_width', 0 );
+add_filter('show_admin_bar', '__return_false');
 
-/**
- * Register widget area.
- *
- * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
- */
-function lbrtx_widgets_init() {
-	register_sidebar(
-		array(
-			'name'          => esc_html__( 'Sidebar', 'lbrtx' ),
-			'id'            => 'sidebar-1',
-			'description'   => esc_html__( 'Add widgets here.', 'lbrtx' ),
-			'before_widget' => '<section id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</section>',
-			'before_title'  => '<h2 class="widget-title">',
-			'after_title'   => '</h2>',
-		)
+get_template_part("inc/scripts");
+get_template_part("inc/functions");
+get_template_part("inc/blocks");
+get_template_part("inc/cpt");
+
+function acf_filter_rest_api_preload_paths( $preload_paths ) {
+	global $post;
+	$rest_path    = rest_get_route_for_post( $post );
+	$remove_paths = array(
+			add_query_arg( 'context', 'edit', $rest_path ),
+			sprintf( '%s/autosaves?context=edit', $rest_path ),
+	);
+
+	return array_filter(
+			$preload_paths,
+			function( $url ) use ( $remove_paths ) {
+					return ! in_array( $url, $remove_paths, true );
+			}
 	);
 }
-add_action( 'widgets_init', 'lbrtx_widgets_init' );
+add_filter( 'block_editor_rest_api_preload_paths', 'acf_filter_rest_api_preload_paths', 10, 1 );
 
-/**
- * Enqueue scripts and styles.
- */
-function lbrtx_scripts() {
-	wp_enqueue_style( 'lbrtx-style', get_stylesheet_uri(), array(), _S_VERSION );
-	wp_style_add_data( 'lbrtx-style', 'rtl', 'replace' );
+function cc_mime_types($mimes) {
+  $mimes['svg'] = 'image/svg+xml';
+  return $mimes;
+}
+add_filter('upload_mimes', 'cc_mime_types');
 
-	wp_enqueue_script( 'lbrtx-custom', get_template_directory_uri() . '/js/custom.js', array(), _S_VERSION, true );
+if( function_exists('acf_add_options_page') ) {
+    
+	acf_add_options_page(array(
+			'page_title'    => __('Настройки темы'),
+			'menu_title'    => __('Настройки темы'),
+			'menu_slug'     => 'theme-general-settings',
+			'capability'    => 'edit_posts',
+			'redirect'      => false
+	));
 	
-	if ( !is_front_page() ) {
-		wp_enqueue_script( 'lbrtx-fxclub', 'https://lib.fxclub.org/landing/js/landing-api.min.2.6.0.js', array('lbrtx-jquery'), _S_VERSION, true );
-		wp_enqueue_script( 'lbrtx-jquery', 'https://lib.fxclub.org/js/jquery.js', array(), _S_VERSION, true );
-		wp_enqueue_script( 'lbrtx-registration', get_template_directory_uri() . '/js/registration.js', array('lbrtx-fxclub'), _S_VERSION, true );
-		wp_localize_script('lbrtx-registration', 'registration', [
-			'apiKey' => get_locale() === 'ru_RU' ? 'baa753c543229b8831c130b549b16577338cf3e5' : '5efdfdae3efff07bdb11f2d9c689482091684e1c',
-		]);
-	}
 }
-add_action( 'wp_enqueue_scripts', 'lbrtx_scripts' );
-
-/**
- * Implement the Custom Header feature.
- */
-require get_template_directory() . '/inc/custom-header.php';
-
-/**
- * Custom template tags for this theme.
- */
-require get_template_directory() . '/inc/template-tags.php';
-
-/**
- * Functions which enhance the theme by hooking into WordPress.
- */
-require get_template_directory() . '/inc/template-functions.php';
-
-/**
- * Customizer additions.
- */
-require get_template_directory() . '/inc/customizer.php';
-
-/**
- * Load Jetpack compatibility file.
- */
-if ( defined( 'JETPACK__VERSION' ) ) {
-	require get_template_directory() . '/inc/jetpack.php';
-}
-
-add_filter('show_admin_bar', '__return_false');
