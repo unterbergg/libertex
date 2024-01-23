@@ -1133,6 +1133,16 @@ textarea {
 	border: none;
 	width: auto !important;
 	z-index: 3;
+	display: flex !important;
+	flex-direction: column;
+}
+
+.header__top .trp-language-switcher .trp-ls-shortcode-language .curlang {
+	order: 0;
+}
+
+.header__top .trp-language-switcher .trp-ls-shortcode-language a:not(.curlang) {
+	order: 1;
 }
 
 .header__top .trp-language-switcher > div > a {

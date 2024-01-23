@@ -77,7 +77,15 @@
         background-image: unset;
         border: none;
         width: auto !important;
-        z-index: 3;
+        z-index: 3;    
+        display: flex !important;
+        flex-direction: column;
+        .curlang {
+          order: 0;
+        }
+        a:not(.curlang) {
+          order: 1;
+        }
       }
       & > div > a {
         padding: 7px;

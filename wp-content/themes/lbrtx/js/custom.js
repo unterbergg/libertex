@@ -39,4 +39,18 @@ document.addEventListener( 'DOMContentLoaded', ( e ) => {
 	document.querySelector('.tools__more')?.addEventListener('click', e => {
 		tools.classList.add('open-tools');
 	});
+
+	const trp_ls_shortcodes = document.querySelectorAll('.trp_language_switcher_shortcode .trp-language-switcher');
+	if (trp_ls_shortcodes.length > 0) {
+		const trp_el = trp_ls_shortcodes[trp_ls_shortcodes.length - 1];
+
+		const trp_shortcode_language_item = trp_el.querySelector('.trp-ls-shortcode-language')
+		const trp_ls_shortcode_width = trp_shortcode_language_item.offsetWidth + 16;
+		trp_shortcode_language_item.style.width = trp_ls_shortcode_width + 'px';
+		trp_el.querySelector('.trp-ls-shortcode-current-language').style.width = trp_ls_shortcode_width + 'px';
+		trp_shortcode_language_item.style.display = 'none';
+		document.querySelector('.curlang').addEventListener('click', e => {
+			e.preventDefault();
+		})
+	}
 } );

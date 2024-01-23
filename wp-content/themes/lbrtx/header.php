@@ -57,31 +57,28 @@ if (function_exists('get_field')) {
 								>
 									<img class="trp-flag-image"
 										src="<?php echo get_template_directory_uri(); ?>/assets/icons/<?php echo get_locale();?>.png"
-										width="18" height="12" alt="<?php echo get_locale();?>"> </a>
+										width="18" height="12" alt="<?php echo get_locale();?>">
+								</a>
 							</div>
-							<div class="trp-ls-shortcode-language" style="width: 71px; display: none;">
-								<a href="<?php echo get_permalink(pll_get_post( $post->ID, 'ru' )); ?>" class="trp-ls-disabled-language" title="Russian">
+							<div class="trp-ls-shortcode-language">
+								<a href="<?php echo get_permalink(pll_get_post( $post->ID, 'ru' )); ?>" 
+									class="trp-ls-disabled-language <?php if ($curlang == 'ru') {echo 'curlang';} ?>" 
+									title="Russian"
+									
+								>
 									<img class="trp-flag-image"
 										src="<?php echo get_template_directory_uri(); ?>/assets/icons/ru_RU.png"
-										width="18" height="12" alt="ru_RU" title="Russian"> </a>
-								<a href="<?php echo get_permalink(pll_get_post( $post->ID, 'en' )); ?>" title="English">
+										width="18" height="12" alt="ru_RU" title="Russian">
+								</a>
+								<a href="<?php echo get_permalink(pll_get_post( $post->ID, 'en' )); ?>"
+									class=" <?php if ($curlang == 'en') {echo 'curlang';} ?>"
+									title="English"
+								>
 									<img class="trp-flag-image"
 										src="<?php echo get_template_directory_uri(); ?>/assets/icons/en_US.png"
-										width="18" height="12" alt="en_US" title="English"> </a>
-
+										width="18" height="12" alt="en_US" title="English">
+								</a>
 							</div>
-							<script type="application/javascript">
-								var trp_ls_shortcodes = document.querySelectorAll('.trp_language_switcher_shortcode .trp-language-switcher');
-								if (trp_ls_shortcodes.length > 0) {
-									var trp_el = trp_ls_shortcodes[trp_ls_shortcodes.length - 1];
-
-									var trp_shortcode_language_item = trp_el.querySelector('.trp-ls-shortcode-language')
-									var trp_ls_shortcode_width = trp_shortcode_language_item.offsetWidth + 16;
-									trp_shortcode_language_item.style.width = trp_ls_shortcode_width + 'px';
-									trp_el.querySelector('.trp-ls-shortcode-current-language').style.width = trp_ls_shortcode_width + 'px';
-									trp_shortcode_language_item.style.display = 'none';
-								}
-							</script>
 						</div>
 					</div>
 					<ul>
